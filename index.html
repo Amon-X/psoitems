@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSO v2 Item Database</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>PSO v2 Item Database</h1>
+
+    <div id="version-bar">
+      <label>Version:</label>
+      <button class="ver-btn active" data-ver="v2">Version 2</button>
+      <button class="ver-btn" data-ver="v1">Version 1</button>
+    </div>
+
+    <!-- =====================================================================
+         WASM STUB: Custom data file upload
+         When the WASM parser is ready, unhide this section and wire up
+         handleFileUpload() in app.js to pass the ArrayBuffer to the
+         WASM module instead of loading a JSON file.
+         ===================================================================== -->
+    <div id="wasm-upload" class="hidden">
+      <label for="data-file">Load custom data file:</label>
+      <input type="file" id="data-file" accept=".bin,.dat,.prs" />
+      <span id="wasm-status"></span>
+    </div>
+
+  </header>
+
+  <nav id="tab-bar">
+    <button class="tab-btn active" data-tab="weapons">Weapons</button>
+    <button class="tab-btn" data-tab="armor">Armor</button>
+    <button class="tab-btn" data-tab="shields">Shields</button>
+    <button class="tab-btn" data-tab="units">Units</button>
+    <button class="tab-btn" data-tab="mags">Mags</button>
+    <button class="tab-btn" data-tab="drops">Drop Tables</button>
+  </nav>
+
+  <div id="controls">
+    <input type="text" id="search-box" placeholder="Search items…" />
+    <div id="class-filter-bar" class="hidden">
+      <span class="filter-label">Class:</span>
+      <button class="class-btn" data-cls="HUcast">HUcast</button>
+      <button class="class-btn" data-cls="HUmar">HUmar</button>
+      <button class="class-btn" data-cls="HUnewearl">HUnewearl</button>
+      <button class="class-btn" data-cls="RAcast">RAcast</button>
+      <button class="class-btn" data-cls="RAcaseal">RAcaseal</button>
+      <button class="class-btn" data-cls="RAmar">RAmar</button>
+      <button class="class-btn" data-cls="FOmarl">FOmarl</button>
+      <button class="class-btn" data-cls="FOnewm">FOnewm</button>
+      <button class="class-btn" data-cls="FOnewearl">FOnewearl</button>
+    </div>
+    <div id="section-filter-bar" class="hidden">
+      <span class="filter-label">Section ID:</span>
+      <button class="section-btn" data-sid="0">Viridia</button>
+      <button class="section-btn" data-sid="1">Greenill</button>
+      <button class="section-btn" data-sid="2">Skyly</button>
+      <button class="section-btn" data-sid="3">Bluefull</button>
+      <button class="section-btn" data-sid="4">Purplenum</button>
+      <button class="section-btn" data-sid="5">Pinkal</button>
+      <button class="section-btn" data-sid="6">Redria</button>
+      <button class="section-btn" data-sid="7">Oran</button>
+      <button class="section-btn" data-sid="8">Yellowboze</button>
+      <button class="section-btn" data-sid="9">Whitill</button>
+    </div>
+  </div>
+
+  <div id="content-area">
+    <main id="table-container">
+      <table id="item-table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </main>
+
+    <aside id="detail-panel">
+      <div id="detail-placeholder">Click an item for details</div>
+      <div id="detail-content" class="hidden"></div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+
+  <!-- =====================================================================
+       WASM STUB: Load WASM module script
+       Uncomment when the Emscripten-compiled parser is ready.
+       The module should export parsePSOData(uint8Array) -> Object
+       matching the same shape as the JSON data files above.
+
+       <script src="wasm/pso_parser.js"></script>
+  ===================================================================== -->
+
+</body>
+</html>
