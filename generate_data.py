@@ -1,13 +1,131 @@
 #!/usr/bin/env python3
 """
-Extract item data from Form1.cs and generate web/data/v1.js and web/data/v2.js
+Generate web/data/v1.json, web/data/v2.json, and web/data/gc.json.
+
+V1 data is read from web/v1/*.txt (dataGridView*.Rows.Add format).
+V2 data is read from web/v2/*.txt.
+GC data is read from web/gc/*.txt.
 Run from the web/ directory: python3 generate_data.py
 """
 
-import re, os, json
+import re, os, json, sys
 
-SRC = os.path.join(os.path.dirname(__file__),
-                   "..", "Psov2 Items", "Form1.cs")
+SRC    = os.path.join(os.path.dirname(__file__), "..", "Psov2 Items", "Form1.cs")
+V1_DIR = os.path.join(os.path.dirname(__file__), "v1")
+V2_DIR = os.path.join(os.path.dirname(__file__), "v2")
+GC_DIR = os.path.join(os.path.dirname(__file__), "gc")
+
+# GC area table from gcbbhelper.py
+sys.path.insert(0, os.path.dirname(__file__))
+from gcbbhelper import AREA2
+
+EP1_MONSTERS = {
+    "0x01": ("Hildebear",          "Hildelt"),
+    "0x02": ("Hildeblue",          "Hildetorr"),
+    "0x03": ("Mothmant",           "Mothvert"),
+    "0x04": ("Monest",             "Mothvist"),
+    "0x05": ("Rag Rappy",          "El Rappy"),
+    "0x06": ("Al Rappy",           "Pal Rappy"),
+    "0x07": ("Savage Wolf",        "Gulgus"),
+    "0x08": ("Barbarous Wolf",     "Gulgus-gue"),
+    "0x09": ("Booma",              "Bartle"),
+    "0x0a": ("Gobooma",            "Barble"),
+    "0x0b": ("Gigobooma",          "Tollaw"),
+    "0x0c": ("Grass Assassin",     "Crimson Assassin"),
+    "0x0d": ("Poison Lily",        "Ob Lily"),
+    "0x0e": ("Nar Lily",           "Mil Lily"),
+    "0x0f": ("Nano Dragon",        None),
+    "0x10": ("Evil Shark",         "Vulmer"),
+    "0x11": ("Pal Shark",          "Govulmer"),
+    "0x12": ("Guil Shark",         "Melqueek"),
+    "0x13": ("Pofuilly Slime",     None),
+    "0x14": ("Pouilly Slime",      None),
+    "0x15": ("Pan Arms",           None),
+    "0x16": ("Migium",             None),
+    "0x17": ("Hidoom",             None),
+    "0x18": ("Dubchic",            "Dubchich"),
+    "0x19": ("Garanz",             "Baranz"),
+    "0x1a": ("Sinow Beat",         "Sinow Blue"),
+    "0x1b": ("Sinow Gold",         "Sinow Red"),
+    "0x1c": ("Canadine",           "Canabin"),
+    "0x1d": ("Canane",             "Canune"),
+    "0x1e": ("Delsaber",           None),
+    "0x1f": ("Chaos Sorceror",     "Gran Sorceror"),
+    "0x22": ("Dark Gunner",        None),
+    "0x23": ("Death Gunner",       None),
+    "0x24": ("Chaos Bringer",      "Dark Bringer"),
+    "0x25": ("Dark Belra",         "Indi Belra"),
+    "0x26": ("Claw",               None),
+    "0x27": ("Bulk",               None),
+    "0x28": ("Bulclaw",            None),
+    "0x29": ("Dimenian",           "Arlan"),
+    "0x2a": ("La Dimenian",        "Merlan"),
+    "0x2b": ("So Dimenian",        "Del-D"),
+    "0x2c": ("Dragon",             "Sil Dragon"),
+    "0x2d": ("De Rol Le",          "Dal Ral Lie"),
+    "0x2e": ("Vol Opt (phase 2)",  "Vol Opt ver.2 (phase 2)"),
+    "0x2f": ("Dark Falz (phase 2)", None),
+    "0x32": ("Gillchic",           "Gillchich"),
+}
+
+EP2_MONSTERS = {
+    "0x01": ("Hildebear",          "Hildelt"),
+    "0x02": ("Hildeblue",          "Hildetorr"),
+    "0x03": ("Mothmant",           "Mothvert"),
+    "0x04": ("Monest",             "Mothvist"),
+    "0x05": ("Rag Rappy",          "El Rappy"),
+    "0x07": ("Savage Wolf",        "Gulgus"),
+    "0x08": ("Barbarous Wolf",     "Gulgus-gue"),
+    "0x0c": ("Grass Assassin",     "Crimson Assassin"),
+    "0x0d": ("Poison Lily",        "Ob Lily"),
+    "0x0e": ("Nar Lily",           "Mil Lily"),
+    "0x15": ("Pan Arms",           None),
+    "0x16": ("Migium",             None),
+    "0x17": ("Hidoom",             None),
+    "0x18": ("Dubchic",            "Dubchich"),
+    "0x19": ("Garanz",             "Baranz"),
+    "0x1e": ("Delsaber",           None),
+    "0x1f": ("Chaos Sorceror",     "Gran Sorceror"),
+    "0x25": ("Dark Belra",         "Indi Belra"),
+    "0x29": ("Dimenian",           "Arlan"),
+    "0x2a": ("La Dimenian",        "Merlan"),
+    "0x2b": ("So Dimenian",        "Del-D"),
+    "0x32": ("Gillchic",           "Gillchich"),
+    "0x33": ("Love Rappy",         None),
+    "0x34": ("Merillia",           None),
+    "0x35": ("Meriltas",           None),
+    "0x36": ("Gee",                None),
+    "0x37": ("Gi Gue",             None),
+    "0x38": ("Mericarol",          None),
+    "0x39": ("Merikle",            None),
+    "0x3a": ("Mericus",            None),
+    "0x3b": ("Ul Gibbon",          None),
+    "0x3c": ("Zol Gibbon",         None),
+    "0x3d": ("Gibbles",            None),
+    "0x3e": ("Sinow Berill",       None),
+    "0x3f": ("Sinow Spigell",      None),
+    "0x40": ("Dolmolm",            None),
+    "0x41": ("Dolmdarl",           None),
+    "0x42": ("Morfos",             None),
+    "0x43": ("Recobox",            None),
+    "0x44": ("Recon",              None),
+    "0x45": ("Sinow Zoa",          None),
+    "0x46": ("Sinow Zele",         None),
+    "0x47": ("Deldepth",           None),
+    "0x48": ("Delbiter",           None),
+    "0x49": ("Barba Ray",          None),
+    "0x4a": ("Pig Ray",            None),
+    "0x4b": ("Ul Ray",             None),
+    "0x4c": ("Gol Dragon",         None),
+    "0x4d": ("Gal Gryphon",        None),
+    "0x4e": ("Olga Flow (phase 2)", None),
+    "0x4f": ("Saint Rappy",        None),
+    "0x50": ("Hallo Rappy",        None),
+    "0x51": ("Egg Rappy",          None),
+    "0x52": ("Ill Gill",           None),
+    "0x53": ("Del Lily",           None),
+    "0x54": ("Epsilon",            None),
+}
 
 
 def parse_dictionary(cs_text):
@@ -172,6 +290,19 @@ def parse_rows_from_view(cs_text, method_name, view_name):
         args_str = match.group(1)
         args = [a.strip().strip('"') for a in re.split(r',\s*(?=")', args_str)]
         rows.append(args)
+    return rows
+
+
+def parse_txt_file(path):
+    """Parse a .txt file of dataGridView*.Rows.Add(...) lines into a list of arg lists."""
+    rows = []
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            m = re.search(r'Rows\.Add\(([^;]+)\)', line)
+            if not m:
+                continue
+            args = [a.strip().strip('"') for a in re.split(r',\s*(?=")', m.group(1))]
+            rows.append(args)
     return rows
 
 
@@ -344,6 +475,35 @@ def make_drop(row):
     }
 
 
+def make_drop_gc(row, monster_table):
+    # cols: diff sectionId monsterHex monsterHex2 dropRate dropPct dropRatio itemName area
+    diff, sid, monster, monster2, drop_rate, drop_pct, drop_ratio, item_name, area = row[:9]
+    resolved_diff = DIFF.get(diff, diff)
+    is_ult = resolved_diff == "Ultimate"
+
+    monster_key = monster.lower()
+    monster_names = monster_table.get(monster_key)
+    if monster_names is not None:
+        resolved_monster = monster_names[1] if is_ult and monster_names[1] else monster_names[0]
+    else:
+        resolved_monster = monster
+
+    # AREA2 keys are uppercase 2-char hex without 0x prefix (e.g. "01", "13")
+    area_key = area.upper().replace("0X", "").lstrip("0") or "0"
+    resolved_area = AREA2.get(area_key.zfill(2), area)
+
+    return {
+        "difficulty": resolved_diff,
+        "sectionId":  int(sid),
+        "monster":    resolved_monster,
+        "dropRate":   drop_rate,
+        "dropPct":    drop_pct,
+        "dropRatio":  drop_ratio,
+        "itemName":   item_name,
+        "area":       resolved_area,
+    }
+
+
 # ---------------------------------------------------------------------------
 # Output
 # ---------------------------------------------------------------------------
@@ -363,59 +523,119 @@ def main():
 
     desc_map = parse_dictionary(cs)
 
-    weapons = [make_weapon(r, desc_map.get(r[0], "")) for r in parse_rows(cs, "loadWeapoms")]
-    armors  = [make_armor(r,  desc_map.get(r[0], "")) for r in parse_rows(cs, "loadArmors")]
-    shields = [make_shield(r, desc_map.get(r[0], "")) for r in parse_rows(cs, "loadShields")]
+    # -----------------------------------------------------------------------
+    # V1 — read from web/v1/*.txt
+    # -----------------------------------------------------------------------
+    v1_weapons = [make_weapon(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V1_DIR, "weapons.txt"))]
+    v1_armors  = [make_armor(r,  desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V1_DIR, "armor.txt"))]
+    v1_shields = [make_shield(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V1_DIR, "shields.txt"))]
+    v1_units   = [make_unit(r,   desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V1_DIR, "units.txt"))]
 
-    # Mags and units live inside loadDropsV2 (alongside the v2 drop data).
-    # Filter to rows where col[1] is numeric (the active format has a numeric id;
-    # the commented-out old format used text blast names in col[1]).
-    mag_rows = [r for r in parse_rows_from_view(cs, "loadDropsV2", "dataGridView4")
-                if len(r) > 1 and r[1].lstrip('-').isdigit()]
-    mags  = [make_mag(r,  desc_map.get(r[0], "")) for r in mag_rows]
-    units = [make_unit(r, desc_map.get(r[0], "")) for r in parse_rows_from_view(cs, "loadDropsV2", "dataGridView5")]
+    v1_mag_rows = [r for r in parse_txt_file(os.path.join(V1_DIR, "mags.txt"))
+                   if len(r) > 1 and r[1].lstrip('-').isdigit()]
+    v1_mags    = [make_mag(r, desc_map.get(r[0], "")) for r in v1_mag_rows]
 
-    # Drop tables: dataGridView6 has the sectionId column
-    drops_v1 = []
-    drops_v2 = []
-    for method, target in [("loadDropsV1", drops_v1), ("loadDropsV2", drops_v2)]:
-        for row in parse_rows_from_view(cs, method, "dataGridView6"):
-            if len(row) >= 9:
-                try:
-                    target.append(make_drop(row))
-                except Exception as e:
-                    print(f"  skip drop row {row}: {e}")
+    v1_drops = []
+    for row in parse_txt_file(os.path.join(V1_DIR, "droprates.txt")):
+        if len(row) >= 9:
+            try:
+                v1_drops.append(make_drop(row))
+            except Exception as e:
+                print(f"  skip v1 drop row {row}: {e}")
 
-    # Build per-version data sets
-    for ver, ver_num, drops in [("v1", 1, drops_v1), ("v2", 2, drops_v2)]:
-        if ver_num == 2:
-            ver_weapons = weapons
-            ver_armor   = armors
-            ver_shields = shields
-            ver_mags    = mags
-        else:
-            ver_weapons = [w for w in weapons if w["version"] == 1]
-            ver_armor   = [a for a in armors  if a["version"] == 1]
-            ver_shields = [s for s in shields if s["version"] == 1]
-            ver_mags    = [m for m in mags    if m["version"] == 1]
+    # -----------------------------------------------------------------------
+    # V2 — read from web/v2/*.txt
+    # -----------------------------------------------------------------------
+    v2_weapons = [make_weapon(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V2_DIR, "weapons.txt"))]
+    v2_armors  = [make_armor(r,  desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V2_DIR, "armor.txt"))]
+    v2_shields = [make_shield(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V2_DIR, "shields.txt"))]
+    v2_units   = [make_unit(r,   desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(V2_DIR, "units.txt"))]
 
+    v2_mag_rows = [r for r in parse_txt_file(os.path.join(V2_DIR, "mags.txt"))
+                   if len(r) > 1 and r[1].lstrip('-').isdigit()]
+    v2_mags    = [make_mag(r, desc_map.get(r[0], "")) for r in v2_mag_rows]
+
+    v2_drops = []
+    for row in parse_txt_file(os.path.join(V2_DIR, "droprates.txt")):
+        if len(row) >= 9:
+            try:
+                v2_drops.append(make_drop(row))
+            except Exception as e:
+                print(f"  skip v2 drop row {row}: {e}")
+
+    # -----------------------------------------------------------------------
+    # GC — read from web/gc/*.txt
+    # -----------------------------------------------------------------------
+    gc_weapons = [make_weapon(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(GC_DIR, "weapons.txt"))]
+    gc_armors  = [make_armor(r,  desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(GC_DIR, "armor.txt"))]
+    gc_shields = [make_shield(r, desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(GC_DIR, "shields.txt"))]
+    gc_units   = [make_unit(r,   desc_map.get(r[0], ""))
+                  for r in parse_txt_file(os.path.join(GC_DIR, "units.txt"))]
+
+    gc_mag_rows = [r for r in parse_txt_file(os.path.join(GC_DIR, "mags.txt"))
+                   if len(r) > 1 and r[1].lstrip('-').isdigit()]
+    gc_mags    = [make_mag(r, desc_map.get(r[0], "")) for r in gc_mag_rows]
+
+    gc_drops_ep1 = []
+    for row in parse_txt_file(os.path.join(GC_DIR, "droprates.txt")):
+        if len(row) >= 9:
+            try:
+                gc_drops_ep1.append(make_drop_gc(row, EP1_MONSTERS))
+            except Exception as e:
+                print(f"  skip gc ep1 drop row {row}: {e}")
+
+    gc_drops_ep2 = []
+    for row in parse_txt_file(os.path.join(GC_DIR, "droprates_ep2.txt")):
+        if len(row) >= 9:
+            try:
+                gc_drops_ep2.append(make_drop_gc(row, EP2_MONSTERS))
+            except Exception as e:
+                print(f"  skip gc ep2 drop row {row}: {e}")
+
+    # -----------------------------------------------------------------------
+    # Write JSON
+    # -----------------------------------------------------------------------
+    datasets = [
+        ("v1", v1_weapons, v1_armors, v1_shields, v1_units, v1_mags, v1_drops, None),
+        ("v2", v2_weapons, v2_armors, v2_shields, v2_units, v2_mags, v2_drops, None),
+    ]
+    for ver, weps, arms, shlds, units, mags, drops, _ in datasets:
         data = {
-            "weapons": ver_weapons,
-            "armor":   ver_armor,
-            "shields": ver_shields,
+            "weapons": weps,
+            "armor":   arms,
+            "shields": shlds,
             "units":   units,
-            "mags":    ver_mags,
+            "mags":    mags,
             "drops":   drops,
         }
         out = os.path.join(os.path.dirname(__file__), "data", f"{ver}.js")
         write_js(out, data)
 
-    print(f"  weapons: {len(weapons)} ({sum(1 for w in weapons if w['version']==1)} v1, {sum(1 for w in weapons if w['version']==2)} v2)")
-    print(f"  armors:  {len(armors)} ({sum(1 for a in armors if a['version']==1)} v1, {sum(1 for a in armors if a['version']==2)} v2)")
-    print(f"  shields: {len(shields)} ({sum(1 for s in shields if s['version']==1)} v1, {sum(1 for s in shields if s['version']==2)} v2)")
-    print(f"  units:   {len(units)}")
-    print(f"  mags:    {len(mags)} ({sum(1 for m in mags if m['version']==1)} v1, {sum(1 for m in mags if m['version']==2)} v2)")
-    print(f"  drops:   {len(drops_v1)} v1, {len(drops_v2)} v2")
+    gc_data = {
+        "weapons":    gc_weapons,
+        "armor":      gc_armors,
+        "shields":    gc_shields,
+        "units":      gc_units,
+        "mags":       gc_mags,
+        "drops":      gc_drops_ep1,
+        "drops_ep2":  gc_drops_ep2,
+    }
+    write_js(os.path.join(os.path.dirname(__file__), "data", "gc.js"), gc_data)
+
+    print(f"  v1 weapons: {len(v1_weapons)}, armors: {len(v1_armors)}, shields: {len(v1_shields)}, units: {len(v1_units)}, mags: {len(v1_mags)}, drops: {len(v1_drops)}")
+    print(f"  v2 weapons: {len(v2_weapons)}, armors: {len(v2_armors)}, shields: {len(v2_shields)}, units: {len(v2_units)}, mags: {len(v2_mags)}, drops: {len(v2_drops)}")
+    print(f"  gc weapons: {len(gc_weapons)}, armors: {len(gc_armors)}, shields: {len(gc_shields)}, units: {len(gc_units)}, mags: {len(gc_mags)}, drops_ep1: {len(gc_drops_ep1)}, drops_ep2: {len(gc_drops_ep2)}")
 
 
 if __name__ == "__main__":

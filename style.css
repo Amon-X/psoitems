@@ -30,6 +30,22 @@ header h1 {
   white-space: nowrap;
 }
 
+.nav-link {
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #e94560;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.nav-link:hover {
+  background: #e94560;
+  color: #fff;
+}
+
 #version-bar {
   display: flex;
   align-items: center;
@@ -231,6 +247,24 @@ nav#tab-bar {
   color: #e0e0e0;
   overflow-y: auto;
   flex-shrink: 0;
+}
+
+#cross-version-toggle {
+  font-size: 0.78rem;
+  color: #aaa;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #0f3460;
+  margin-bottom: 0.6rem;
+}
+
+#cross-version-toggle input {
+  margin-right: 0.35rem;
+  accent-color: #e94560;
+  cursor: pointer;
+}
+
+#cross-version-toggle label {
+  cursor: pointer;
 }
 
 #detail-placeholder {

@@ -9,13 +9,15 @@
 <body>
 
   <header>
-    <h1>PSO v2 Item Database</h1>
+    <h1>PSO V1 / V2 Item Database</h1>
 
     <div id="version-bar">
       <label>Version:</label>
       <button class="ver-btn active" data-ver="v2">Version 2</button>
       <button class="ver-btn" data-ver="v1">Version 1</button>
     </div>
+
+    <a class="nav-link hidden" href="gc.html">GameCube (V3) →</a>
 
     <!-- =====================================================================
          WASM STUB: Custom data file upload
@@ -78,6 +80,9 @@
     </main>
 
     <aside id="detail-panel">
+      <div id="cross-version-toggle">
+        <label><input type="checkbox" id="show-other-ver" /> Show other version drop info</label>
+      </div>
       <div id="detail-placeholder">Click an item for details</div>
       <div id="detail-content" class="hidden"></div>
     </aside>
