@@ -118,7 +118,7 @@ const WEAPON_NOTES = {
   "GULD MILLA":         { unobtainable: true },
   "TSUMIKIRI J-SWORD":  { unobtainable: true },
   "DOUBLE CANNON":      { unobtainable: true },
-  "AGITO (AUW 1975)": { notes:"Possibly a 1/311 drop in Very Hard for Skyly in V1 jp from a Booma" },
+  "AGITO (AUW 1975)": { notes:"This was patched in V2 to be a 1/137,659,209 drop for Very Hard Skyly from a Booma instead of 1/311, official v1 copies are 1/311. Some copies of v1 are patched" },
 };
 
 const ARMOR_NOTES = {
