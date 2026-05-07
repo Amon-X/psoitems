@@ -2257,7 +2257,7 @@
       "stars": 12,
       "version": 2,
       "srank": false,
-      "desc": "A one-handed axe with a Photon blade. Its special attack steals HP."
+      "desc": "A mysterious cane known only as the ultimate cane. Its abilities are unknown."
     },
     {
       "name": "HEAVEN PUNISHER",
@@ -2275,7 +2275,7 @@
       "stars": 12,
       "version": 2,
       "srank": false,
-      "desc": "A large sword with small, spinning Photon blades. Its special attack steals enemy HP."
+      "desc": "The ultimate gun, a weapon veiled in mystery. \"Divine Punishment,\"  its special attack, is based on time..."
     },
     {
       "name": "LAVIS CANNON",
@@ -2293,7 +2293,7 @@
       "stars": 11,
       "version": 2,
       "srank": false,
-      "desc": "A special cane created based on a legendary holy cane. Casts Foie as a special attack."
+      "desc": "Few facts or even rumors are known about this ultimate sword. Its abilities are a mystery."
     },
     {
       "name": "VICTOR AXE",
@@ -2311,7 +2311,7 @@
       "stars": 10,
       "version": 2,
       "srank": false,
-      "desc": "A special battle cane with needles on its tip. Its special attack steals TP."
+      "desc": "A one-handed axe with a Photon blade. Its special attack steals HP."
     },
     {
       "name": "CHAIN SAWD",
@@ -2329,7 +2329,7 @@
       "stars": 10,
       "version": 2,
       "srank": false,
-      "desc": "A special magical cane with the magic rock Heart Key on its tip. It can cast Zonde without TP cost."
+      "desc": "A large sword with small, spinning Photon blades. Its special attack steals enemy HP."
     },
     {
       "name": "CADUCEUS",
@@ -2347,7 +2347,7 @@
       "stars": 10,
       "version": 2,
       "srank": false,
-      "desc": "A special magical cane for Forces, made by an adept in science and magic. Casts Barta."
+      "desc": "A special cane created based on a legendary holy cane. Casts Foie as a special attack."
     },
     {
       "name": "STING TIP",
@@ -2365,7 +2365,7 @@
       "stars": 10,
       "version": 2,
       "srank": false,
-      "desc": "A mysterious cane known only as the ultimate cane. Its abilities are unknown."
+      "desc": "A special battle cane with needles on its tip. Its special attack steals TP."
     },
     {
       "name": "MAGICAL PIECE",
@@ -2383,7 +2383,7 @@
       "stars": 11,
       "version": 2,
       "srank": false,
-      "desc": "The ultimate gun, a weapon veiled in mystery. \"Divine Punishment,\"  its special attack, is based on time..."
+      "desc": "A special magical cane with the magic rock Heart Key on its tip. It can cast Zonde without TP cost."
     },
     {
       "name": "TECHNICAL CROZIER",
@@ -2401,7 +2401,7 @@
       "stars": 10,
       "version": 2,
       "srank": false,
-      "desc": "Few facts or even rumors are known about this ultimate sword. Its abilities are a mystery."
+      "desc": "A special magical cane for Forces, made by an adept in science and magic. Casts Barta."
     },
     {
       "name": "SUPPRESSED GUN",
@@ -3047,7 +3047,7 @@
       "stars": 9,
       "version": 2,
       "srank": true,
-      "desc": "This weapon fires a punch bomb. It does great damage, but sequence attacks are not possible"
+      "desc": "This weapon fires a punch bomb. It does great damage, but sequence attacks are not possible."
     },
     {
       "name": "SAMBA MARACAS",
@@ -3385,7 +3385,8 @@
       "stat": "48",
       "stars": 11,
       "version": 2,
-      "srank": true
+      "srank": true,
+      "desc": "Chao, a very popular character in this world, is on the end of this cane. Its value is priceless."
     },
     {
       "name": "BROOM",
@@ -13796,7 +13797,8 @@
       "evpRange": 2,
       "stars": 3,
       "stat": "",
-      "version": 2
+      "version": 2,
+      "desc": "Protective gear for the body. Boosts defense for Hunters and Rangers."
     },
     {
       "name": "Hyper Frame",
