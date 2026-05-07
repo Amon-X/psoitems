@@ -552,6 +552,11 @@ nav#tab-bar {
     padding: 0.35rem 0.5rem;
   }
 
+  #item-table th:first-child,
+  #item-table td:first-child {
+    min-width: 180px;
+  }
+
   /* Controls row */
   #controls {
     padding: 0.5rem 0.75rem;

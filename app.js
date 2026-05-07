@@ -256,6 +256,7 @@ const CLASS_NAMES = ["HUcast","HUmar","HUnewearl","RAcast","RAcaseal","RAmar","F
 // Tabs where class filtering applies (items have a classes/charClass bitflag)
 const CLASS_FILTER_TABS = new Set(["weapons","armor","shields","mags"]);
 
+
 // Mag name colour overrides — matches Form1.cs colouring logic
 const MAG_GREEN = new Set(["Soniti","Churel","Preta","Pitri"]);
 const MAG_GOLD  = new Set(["PIAN","OPA-OPA","CHAO","ROBOCHAO"]);
@@ -366,16 +367,18 @@ function renderTab(tab) {
   renderRows(rows, columns);
 }
 
+const MOBILE = () => window.innerWidth <= 768;
+
 function renderHeaders(columns) {
   const thead = document.getElementById("table-head");
   thead.innerHTML = "";
   const tr = document.createElement("tr");
 
-  columns.forEach(col => {
+  columns.forEach((col, index) => {
     const th = document.createElement("th");
     th.textContent = col.label;
     th.dataset.key = col.key;
-    if (col.width) th.style.width = col.width;
+    th.style.width = (index === 0 && MOBILE()) ? "280px" : col.width;
     th.addEventListener("click", () => sortByColumn(col.key));
     tr.appendChild(th);
   });
