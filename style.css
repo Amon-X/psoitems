@@ -275,7 +275,7 @@ nav#tab-bar {
 }
 
 #detail-content h3 {
-  color: #e94560;
+  color: #e0e0e0;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
   word-break: break-word;
@@ -429,9 +429,29 @@ nav#tab-bar {
   background: #1a3a5c;
 }
 
-/* Rare items (stars >= 9) get a subtle highlight */
-#item-table tbody tr.rare td:first-child {
+/* V1 rare (stars >= 9): gold */
+#item-table tbody tr.rare-v1 td:first-child {
   color: #f0c040;
+}
+
+/* V2 exclusive items: orange/salmon */
+#item-table tbody tr.rare-v2 td:first-child {
+  color: #e8895a;
+}
+
+/* Mag cell evolution mags (Soniti etc.): green */
+#item-table tbody tr.rare-mag-green td:first-child {
+  color: #4caf78;
+}
+
+/* Mag cell mags (CHAO etc.): gold */
+#item-table tbody tr.rare-mag-gold td:first-child {
+  color: #f0c040;
+}
+
+/* S-RANK weapons: pink */
+#item-table tbody tr.rare-srank td:first-child {
+  color: #f07898;
 }
 
 #loading-msg {
