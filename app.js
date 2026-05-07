@@ -111,7 +111,7 @@ const WEAPON_NOTES = {
   "S-RANK J-BLADE":     { challenge: "Obtain S-Rank in Challenge Mode" },
   "S-RANK J-CUTTER":    { challenge: "Obtain S-Rank in Challenge Mode" },
   "HEART OF POUMN":     { quest: "Rappy's Holiday", notes: "Beat 'Gallon's Treachery' perfectly and obtain shiva stone" },
-  "STIRKER OF CHAO":    { quest: "Towards the Future", notes: "Convert BRANCH OF PAKUPAKU. Play with a branch in your inventory, step into the sparkly in the hospital, then stand under the waterfall in r1 until the chao starts yammering at you\nDo the same with the STIRKER OF CHAO to convert it back", altDropName: "BRANCH OF PAKUPAKU" },
+  "STRIKER OF CHAO":    { quest: "Towards the Future", notes: "Convert BRANCH OF PAKUPAKU. Play with a branch in your inventory, step into the sparkly in the hospital, then stand under the waterfall in r1 until the chao starts yammering at you\nDo the same with the STIRKER OF CHAO to convert it back", altDropName: "BRANCH OF PAKUPAKU" },
   "Soul Eater":         { quest: "from the depth", notes: "Obtained after doing the Sue subplot. Don't tell Sue your name." },
   "SONIC KNUCKLE":      { quest: "Tinkerbell's dog 2", notes: "Beat Sonic at Rock Paper Scissors to obtain item\ntrade item in central dome fire swirl for SONIC KNUCKLE" },
   "AKIKO'S FRYING PAN": { quest: "Secret Delivery", notes: "after you get the 'weapons approval'" },
