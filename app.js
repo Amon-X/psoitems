@@ -756,11 +756,13 @@ function showDetail(tab, row) {
   }
 
   content.innerHTML = parts.join("");
+  document.getElementById("detail-panel").classList.add("open");
 }
 
 function clearDetail() {
   document.getElementById("detail-placeholder").classList.remove("hidden");
   document.getElementById("detail-content").classList.add("hidden");
+  document.getElementById("detail-panel").classList.remove("open");
 }
 
 function escHtml(str) {
@@ -847,6 +849,9 @@ document.getElementById("section-filter-bar").querySelectorAll(".section-btn").f
     }
   });
 });
+
+// Close button — collapses the detail panel on mobile
+document.getElementById("detail-close-btn")?.addEventListener("click", clearDetail);
 
 // File upload input — wired up but no-op until WASM stub is implemented
 document.getElementById("data-file")?.addEventListener("change", e => {
