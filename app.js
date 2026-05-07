@@ -256,6 +256,10 @@ const CLASS_NAMES = ["HUcast","HUmar","HUnewearl","RAcast","RAcaseal","RAmar","F
 // Tabs where class filtering applies (items have a classes/charClass bitflag)
 const CLASS_FILTER_TABS = new Set(["weapons","armor","shields","mags"]);
 
+// Mag name colour overrides — matches Form1.cs colouring logic
+const MAG_GREEN = new Set(["Soniti","Churel","Preta","Pitri"]);
+const MAG_GOLD  = new Set(["PIAN","OPA-OPA","CHAO","ROBOCHAO"]);
+
 // ---------------------------------------------------------------------------
 // Version loading
 // Both v1 and v2 are fetched in parallel so the detail panel can show
@@ -420,7 +424,11 @@ function renderRows(rows, columns) {
 
   sorted.forEach(row => {
     const tr = document.createElement("tr");
-    if ((row.stars ?? 0) >= 9) tr.classList.add("rare");
+    if (row.srank)                                                          tr.classList.add("rare-srank");
+    else if (MAG_GREEN.has(row.name))                                       tr.classList.add("rare-mag-green");
+    else if (MAG_GOLD.has(row.name))                                        tr.classList.add("rare-mag-gold");
+    else if (row.version === 2)                                             tr.classList.add("rare-v2");
+    else if ((row.stars ?? 0) >= 9)                                        tr.classList.add("rare-v1");
 
     columns.forEach(col => {
       const td = document.createElement("td");
@@ -578,8 +586,15 @@ function showDetail(tab, row) {
 
   const parts = [];
 
-  // Item name heading
-  parts.push(`<h3>${escHtml(row.name ?? "")}</h3>`);
+  // Item name heading — colour matches the row highlight
+  let nameColor = "";
+  if (row.srank)                  nameColor = "#f07898";
+  else if (MAG_GREEN.has(row.name)) nameColor = "#4caf78";
+  else if (MAG_GOLD.has(row.name))  nameColor = "#f0c040";
+  else if (row.version === 2)       nameColor = "#e8895a";
+  else if ((row.stars ?? 0) >= 9)   nameColor = "#f0c040";
+  const nameStyle = nameColor ? ` style="color:${nameColor}"` : "";
+  parts.push(`<h3${nameStyle}>${escHtml(row.name ?? "")}</h3>`);
 
   // Classes
   if (tab !== "drops") {

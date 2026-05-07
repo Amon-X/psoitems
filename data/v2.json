@@ -15,6 +15,7 @@
       "stat": "",
       "stars": 0,
       "version": 1,
+      "srank": false,
       "desc": "A sword with a Photon blade. Attacks 1 enemy."
     },
     {
@@ -32,6 +33,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A sword with good accuracy and power."
     },
     {
@@ -49,6 +51,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance sword."
     },
     {
@@ -66,6 +69,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "A superior sword usable only by masters."
     },
     {
@@ -83,6 +87,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional sword. Has amazing power."
     },
     {
@@ -100,6 +105,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A sword with \"DB\" carved into the hilt. Can use TP to launch a strong special attack."
     },
     {
@@ -117,6 +123,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary sword long sought after by warriors. Its special attack freezes enemies."
     },
     {
@@ -134,6 +141,7 @@
       "stat": "15 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary sword known as \"The Knight's Blade.\" Its special attack steals experience points."
     },
     {
@@ -151,6 +159,7 @@
       "stat": "-5 evp",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A large weapon with a Photon blade."
     },
     {
@@ -168,6 +177,7 @@
       "stat": "-5 evp",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A large sword with good accuracy and power."
     },
     {
@@ -185,6 +195,7 @@
       "stat": "-10 evp",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "A large, extremely high-performance sword."
     },
     {
@@ -202,6 +213,7 @@
       "stat": "-10 evp",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior large sword usable only by masters."
     },
     {
@@ -219,6 +231,7 @@
       "stat": "-10 evp",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional large sword. Has amazing power."
     },
     {
@@ -236,6 +249,7 @@
       "stat": "5 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "Bears the serial number 52-0003."
     },
     {
@@ -253,6 +267,7 @@
       "stat": "10 hp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A sword said to protect its bearer in any battle. Its special attack steals HP."
     },
     {
@@ -270,6 +285,7 @@
       "stat": "-15 evp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary sword borne by one who defeated a dragon. Adds an explosive fire attack."
     },
     {
@@ -287,6 +303,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A short Photon sword. Attacks enemies twice."
     },
     {
@@ -304,6 +321,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A short sword with good power and accuracy."
     },
     {
@@ -321,6 +339,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance short sword."
     },
     {
@@ -338,6 +357,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior short sword usable only by masters."
     },
     {
@@ -355,6 +375,7 @@
       "stat": "",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional short sword. Has amazing power."
     },
     {
@@ -372,6 +393,7 @@
       "stat": "10 dfp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A short sword named for its dance-like attack. Its special attack paralyzes enemies."
     },
     {
@@ -389,6 +411,7 @@
       "stat": "10 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary short sword named for all the blood that it spilled. Its special attack halves enemy HP."
     },
     {
@@ -406,6 +429,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary short sword that leaves cross-shaped scars on its victims. Adds lightning damage."
     },
     {
@@ -423,6 +447,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A long sword with a Photon blade. Hits multiple enemies."
     },
     {
@@ -440,6 +465,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A long sword with good accuracy and power."
     },
     {
@@ -457,6 +483,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance long sword."
     },
     {
@@ -474,6 +501,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior long sword usable only by masters."
     },
     {
@@ -491,6 +519,7 @@
       "stat": "",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional long sword. Has amazing power."
     },
     {
@@ -508,6 +537,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary long sword made of precious pure Photons. Its special attack steals enemy TP."
     },
     {
@@ -525,6 +555,7 @@
       "stat": "10 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary long sword for the wealthy. Can launch a powerful attack at the cost of Meseta."
     },
     {
@@ -542,6 +573,7 @@
       "stat": "5 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary long sword that is said to become sharper with every blow. Its special attack freezes enemies."
     },
     {
@@ -559,6 +591,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A throwing blade that hits multiple enemies."
     },
     {
@@ -576,6 +609,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A throwing blade with good power and accuracy."
     },
     {
@@ -593,6 +627,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance throwing blade."
     },
     {
@@ -610,6 +645,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superb throwing blade usable only by masters."
     },
     {
@@ -627,6 +663,7 @@
       "stat": "",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional throwing blade. Amazing power."
     },
     {
@@ -644,6 +681,7 @@
       "stat": "10 dfp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary throwing blade used by elite assassins. Its special attack can kill instantly."
     },
     {
@@ -661,6 +699,7 @@
       "stat": "10 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary throwing blade used by a Hunter called \"The Liberator.\" Causes confusion."
     },
     {
@@ -678,6 +717,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary throwing blade for the brave. Sacrifices HP for a powerful special attack."
     },
     {
@@ -695,6 +735,7 @@
       "stat": "",
       "stars": 0,
       "version": 1,
+      "srank": false,
       "desc": "A small gun that fires Photon bullets."
     },
     {
@@ -712,6 +753,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A small gun with good accuracy and power."
     },
     {
@@ -729,6 +771,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance small gun."
     },
     {
@@ -746,6 +789,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "A superior small gun usable only by masters."
     },
     {
@@ -763,6 +807,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional small gun. Has amazing power."
     },
     {
@@ -780,6 +825,7 @@
       "stat": "10 evp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary, high-performance pistol. Its special attack causes paralysis."
     },
     {
@@ -797,6 +843,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A pistol used by military mechanic group \"TeamOO.\" Proves the bearer to be a member of the team."
     },
     {
@@ -814,6 +861,7 @@
       "stat": "15 dfp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary pistol reserved for high- ranking officers aboard Pioneer 1. Adds lightning damage."
     },
     {
@@ -831,6 +879,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A machine gun that fires a hail of Photon bullets."
     },
     {
@@ -848,6 +897,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A machine gun with good power and accuracy."
     },
     {
@@ -865,6 +915,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance machine gun."
     },
     {
@@ -882,6 +933,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior machine gun usable only by masters."
     },
     {
@@ -899,6 +951,7 @@
       "stat": "",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional machine gun. Has amazing power."
     },
     {
@@ -916,6 +969,7 @@
       "stat": "5 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary machine gun from the Vise Corp. Sacrifices HP for a powerful special attack."
     },
     {
@@ -933,6 +987,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary machine gun from the Justice Corp. Its special attack freezes enemies."
     },
     {
@@ -950,6 +1005,7 @@
       "stat": "10 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary machine gun from the Combat Corp. Its special attack paralyzes enemies."
     },
     {
@@ -967,6 +1023,7 @@
       "stat": "-10 evp",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A shotgun that fires a spread of Photon bullets."
     },
     {
@@ -984,6 +1041,7 @@
       "stat": "-10 evp",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A shotgun with good accuracy and power."
     },
     {
@@ -1001,6 +1059,7 @@
       "stat": "-20 evp",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance shotgun."
     },
     {
@@ -1018,6 +1077,7 @@
       "stat": "-20 evp",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior shotgun usable only by masters."
     },
     {
@@ -1035,6 +1095,7 @@
       "stat": "-20 evp",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional shotgun. Has amazing power."
     },
     {
@@ -1052,6 +1113,7 @@
       "stat": "-30 evp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary shotgun made with concentrated pure Photons. Its special attack steals enemy HP."
     },
     {
@@ -1069,6 +1131,7 @@
       "stat": "-30 evp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary shotgun with power that rivals a meteor strike. Its special attack steals enemy TP."
     },
     {
@@ -1086,6 +1149,7 @@
       "stat": "10 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary shotgun with tremendous power. Its special attack steals enemies' experience points."
     },
     {
@@ -1103,6 +1167,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A long-range gun that fires Photon bullets."
     },
     {
@@ -1120,6 +1185,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A rifle with good accuracy and power."
     },
     {
@@ -1137,6 +1203,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An extremely high performance rifle."
     },
     {
@@ -1154,6 +1221,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "A superior rifle usable only by masters."
     },
     {
@@ -1171,6 +1239,7 @@
       "stat": "",
       "stars": 5,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional rifle. Has amazing power."
     },
     {
@@ -1188,6 +1257,7 @@
       "stat": "5 evp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary rifle crafted by Visk, one of the three masters. Its special attack paralyzes enemies."
     },
     {
@@ -1205,6 +1275,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary rifle crafted by Wals, one of the three masters. Its special attack confuses enemies."
     },
     {
@@ -1222,6 +1293,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary rifle crafted by Justy, one of the three masters. Its special attack halves enemy HP."
     },
     {
@@ -1239,6 +1311,7 @@
       "stat": "",
       "stars": 0,
       "version": 1,
+      "srank": false,
       "desc": "A cane usable only by Forces. Has low attack power."
     },
     {
@@ -1256,6 +1329,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A high-quality cane with average power."
     },
     {
@@ -1273,6 +1347,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A superior cane usable only by masters."
     },
     {
@@ -1290,6 +1365,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional cane. Has amazing power."
     },
     {
@@ -1307,6 +1383,7 @@
       "stat": "10 lck",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary cane made of sturdy Laconium metal. Its special attack adds explosive fire damage."
     },
     {
@@ -1324,6 +1401,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary cane made of the magic stone Adaman. Its special attack adds lightning damage."
     },
     {
@@ -1341,6 +1419,7 @@
       "stat": "10 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary cane made of the magic stone Zumiuran. Its special attack can cause instant death."
     },
     {
@@ -1358,6 +1437,7 @@
       "stat": "",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A battle cane made only for Forces."
     },
     {
@@ -1375,6 +1455,7 @@
       "stat": "",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A battle cane with good accuracy and power."
     },
     {
@@ -1392,6 +1473,7 @@
       "stat": "",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "A superior battle cane usable only by masters."
     },
     {
@@ -1409,6 +1491,7 @@
       "stat": "",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional battle cane. Has amazing power."
     },
     {
@@ -1426,6 +1509,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary battle cane made so Forces can hold their own in a fight. Halves enemy HP."
     },
     {
@@ -1443,6 +1527,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary battle cane for brave Forces. Its special attack uses TP to launch a powerful strike."
     },
     {
@@ -1460,6 +1545,7 @@
       "stat": "20 dfp",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary battle cane made for a Force for intense fights. Its special attack steals enemies' HP."
     },
     {
@@ -1477,6 +1563,7 @@
       "stat": "10 mst",
       "stars": 1,
       "version": 1,
+      "srank": false,
       "desc": "A magic cane for Forces. Boosts mind energy."
     },
     {
@@ -1494,6 +1581,7 @@
       "stat": "10 mst",
       "stars": 2,
       "version": 1,
+      "srank": false,
       "desc": "A magic cane with good power and attributes."
     },
     {
@@ -1511,6 +1599,7 @@
       "stat": "15 mst",
       "stars": 3,
       "version": 1,
+      "srank": false,
       "desc": "A superior magic cane usable only by masters."
     },
     {
@@ -1528,6 +1617,7 @@
       "stat": "15 mst",
       "stars": 4,
       "version": 1,
+      "srank": false,
       "desc": "An exceptional magic cane. Has amazing power."
     },
     {
@@ -1545,6 +1635,7 @@
       "stat": "20 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary magic cane containing the power of fire. Its special attack adds fire damage."
     },
     {
@@ -1562,6 +1653,7 @@
       "stat": "20 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary magic cane containing the power of ice. Its special attack freezes enemies."
     },
     {
@@ -1579,6 +1671,7 @@
       "stat": "20 mst",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A legendary magic cane containing the power of lightning. Adds lightning damage."
     },
     {
@@ -1596,6 +1689,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "Claws with photon blades for quick attacks with right hand. Its special attack steals enemies' HP."
     },
     {
@@ -1613,6 +1707,7 @@
       "stat": "15 evp",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "Legendary claws that kill silently. Its special attack can fell enemies with a single blow."
     },
     {
@@ -1630,6 +1725,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "Legendary claws equippable only by female Hunters or Rangers. Its special attack steals enemy HP."
     },
     {
@@ -1647,6 +1743,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A double-bladed Photon sword. Its special attack steals enemies' TP."
     },
     {
@@ -1664,6 +1761,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "A legendary double-bladed sword usable only by male Hunters and Rangers. Causes confusion."
     },
     {
@@ -1681,6 +1779,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "The ultimate double-bladed sword, only for masters. Its special attack halves enemy HP."
     },
     {
@@ -1698,6 +1797,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "Gear for the fists and feet to boost attack power for unarmed combat. Its special attack causes paralysis."
     },
     {
@@ -1715,6 +1815,7 @@
       "stat": "10 dfp",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "Gear that boosts attack power for unarmed combat. Its special attack freezes enemies."
     },
     {
@@ -1732,6 +1833,7 @@
       "stat": "5 all",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "The ultimate gear for unarmed combat. Its special attack steals experience points."
     },
     {
@@ -1749,6 +1851,7 @@
       "stat": "10 all",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "Unarmed combat gear that allows attacks at sonic speeds. Its special attack steals experience."
     },
     {
@@ -1766,6 +1869,7 @@
       "stat": "15 mst",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1975 model. Made by Dousetsu.  Its special attack halves enemy HP."
     },
     {
@@ -1783,6 +1887,7 @@
       "stat": "15 mst",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1975 model. Made by Dousetsu.  Its special attack halves enemy HP."
     },
     {
@@ -1800,6 +1905,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1975 model. Made by Dousetsu."
     },
     {
@@ -1817,6 +1923,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1983 model. Made by Dousetsu."
     },
     {
@@ -1834,6 +1941,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "AUW 2001 model. Made by Kikoku."
     },
     {
@@ -1851,6 +1959,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1991 model. Made by Kikoku."
     },
     {
@@ -1868,6 +1977,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1977 model. Made by Jou'un."
     },
     {
@@ -1885,6 +1995,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "AUW 1980 model. Made by Tengai."
     },
     {
@@ -1902,6 +2013,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "A cursed sickle that drains HP from the user. Its special attack drains HP for a powerful strike."
     },
     {
@@ -1919,6 +2031,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A cursed, but powerful sickle that drains HP. Its special attack drains HP for a powerful strike."
     },
     {
@@ -1936,6 +2049,7 @@
       "stat": "-30 evp",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A custom shotgun that shoots countless needles. Its special attack paralyzes enemies."
     },
     {
@@ -1953,6 +2067,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A special gun that impales enemies with a giant spear. Its special attack paralyzes enemies."
     },
     {
@@ -1970,6 +2085,7 @@
       "stat": "-20 evp",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A powerful bazooka with highly destructive shells. Its special attack halves enemies' HP."
     },
     {
@@ -1987,6 +2103,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A flamethrower that incinerates enemies with huge fireballs. Its special attack confuses enemies."
     },
     {
@@ -2004,6 +2121,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "The ultimate weapon?--hard, yet supple and smooth!"
     },
     {
@@ -2021,6 +2139,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A magic cane made from the cane of a Chaos Sorcerer. Reduces TP cost by 10% and steals enemy TP."
     },
     {
@@ -2038,6 +2157,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "An enemy weapon made from the hands of a Sinow Beat. Its special attack can kill in a single strike."
     },
     {
@@ -2055,6 +2175,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "An enemy weapon made from the hands of a Pan Arms. Its special attack paralyzes enemies."
     },
     {
@@ -2072,6 +2193,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "Delsaber's hand, now an enemy weapon. Powers up 100% if used with a Delsaber's shield. Lightning damage."
     },
     {
@@ -2089,6 +2211,7 @@
       "stat": "-20 evp",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "An enemy weapon made from a Chaos Bringer's hand. Its special attack cuts enemy HP to 1/4."
     },
     {
@@ -2106,6 +2229,7 @@
       "stat": "",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "A special gun made by a mysterious scientist out to conquer the world. Does fire damage."
     },
     {
@@ -2123,6 +2247,7 @@
       "stat": "",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "A one-handed axe with a Photon blade. Its special attack steals HP."
     },
     {
@@ -2140,6 +2265,7 @@
       "stat": "",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "A large sword with small, spinning Photon blades. Its special attack steals enemy HP."
     },
     {
@@ -2157,6 +2283,7 @@
       "stat": "",
       "stars": 12,
       "version": 1,
+      "srank": false,
       "desc": "A special cane created based on a legendary holy cane. Casts Foie as a special attack."
     },
     {
@@ -2174,6 +2301,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A special battle cane with needles on its tip. Its special attack steals TP."
     },
     {
@@ -2191,6 +2319,7 @@
       "stat": "-15 evp",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A special magical cane with the magic rock Heart Key on its tip. It can cast Zonde without TP cost."
     },
     {
@@ -2208,6 +2337,7 @@
       "stat": "",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "A special magical cane for Forces, made by an adept in science and magic. Casts Barta."
     },
     {
@@ -2225,6 +2355,7 @@
       "stat": "30 mst",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "A mysterious cane known only as the ultimate cane. Its abilities are unknown."
     },
     {
@@ -2242,6 +2373,7 @@
       "stat": "30 mst",
       "stars": 11,
       "version": 1,
+      "srank": false,
       "desc": "The ultimate gun, a weapon veiled in mystery. \"Divine Punishment,\"  its special attack, is based on time..."
     },
     {
@@ -2259,6 +2391,7 @@
       "stat": "30 mst",
       "stars": 10,
       "version": 1,
+      "srank": false,
       "desc": "Few facts or even rumors are known about this ultimate sword. Its abilities are a mystery."
     },
     {
@@ -2276,6 +2409,7 @@
       "stat": "",
       "stars": 9,
       "version": 1,
+      "srank": false,
       "desc": "A small gun that fires Photon bullets."
     },
     {
@@ -2293,6 +2427,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "Legendary sword found in the ancient ruins. It absorbs enemy experience."
     },
     {
@@ -2310,6 +2445,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "A special weapon created from the idea of traditional entertainment. Its special attack paralyzes enemies."
     },
     {
@@ -2327,6 +2463,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "This cursed sword sucks HP from the person who wields it. Its special attack can kill an enemy with 1 hit."
     },
     {
@@ -2344,6 +2481,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The ultimate weapon that was created from a wok..?"
     },
     {
@@ -2361,6 +2499,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "Once a child's toy, it has been refined over the years to become the ultimate toy. Its power is devastating."
     },
     {
@@ -2378,6 +2517,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The ancient characters on its blade produce magic. Its special attack is the fire bomb."
     },
     {
@@ -2395,6 +2535,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red saber is a prototype, so its finish is incomplete. Letters, which say \"He,\" are carved on the hilt."
     },
     {
@@ -2412,6 +2553,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "The crystals on both sides of the staff can inflict a lot of damage. Its special attack freezes enemies."
     },
     {
@@ -2429,6 +2571,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "The length of this staff can be changed. Its special attack can take away half of an enemy's health."
     },
     {
@@ -2446,6 +2589,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A mysterious ultimate weapon. Its abilities are unknown."
     },
     {
@@ -2463,6 +2607,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Only certain players can use this ultimate weapon. Don't be deceived by its looks."
     },
     {
@@ -2480,6 +2625,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Owned by Orochi Agito, the blade was made along the same lines as Agito, with a carved seal on the blade."
     },
     {
@@ -2497,6 +2643,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "An ancient sword. Its power is sealed by a mysterious mark, which paralyzes the person who has it."
     },
     {
@@ -2514,6 +2661,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red sword is a prototype, so its finish is incomplete. Letters, which say \"a,\" are carved on the hilt."
     },
     {
@@ -2531,6 +2679,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "AUW 1985 model. Made by Kikoku."
     },
     {
@@ -2548,6 +2697,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "This round sword was built for short-range attack. The attack speed is very fast and it can kill with 1 hit."
     },
     {
@@ -2565,6 +2715,7 @@
       "stat": "30 dfp",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The excellent combination of a wok and a ladle. It's very useful for both attack and defense."
     },
     {
@@ -2582,6 +2733,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A mysterious blade for use with both hands. It's very powerful, and if you use a certain item, it will become..."
     },
     {
@@ -2599,6 +2751,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red blade is a prototype, so its finish is incomplete. Letters, which say \"t,\" are carved on the hilt."
     },
     {
@@ -2616,6 +2769,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Only high society ladies can use this special parasol. It can also protect against ultraviolet rays when outside."
     },
     {
@@ -2633,6 +2787,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "Owning this high quality item proves that you are a true high society lady. You don't have to be afraid of rain."
     },
     {
@@ -2650,6 +2805,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "The blades can kill an enemy with only one hit. Its special attack can take away half of an enemy's health."
     },
     {
@@ -2667,6 +2823,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A very powerful sword. Only Android Hunters can use it due to it's stringent requirements."
     },
     {
@@ -2684,6 +2841,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red partisan is a prototype, so its finish is incomplete. Letters, which say \"h,\" are carved on the grip."
     },
     {
@@ -2701,6 +2859,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "This throwing weapon was based on the ancient ninja's weapon."
     },
     {
@@ -2718,6 +2877,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "When thrown, this fan can kill several enemies at once. Its special attack steals 12% of the enemy's experience."
     },
     {
@@ -2735,6 +2895,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red slicer is a prototype, so its finish is incomplete. Letters, which say \"cl,\" are carved on the grip."
     },
     {
@@ -2752,6 +2913,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A small gun with \"GULD\" engraved on the right side of its barrel. Its special attack steals enemy TP."
     },
     {
@@ -2769,6 +2931,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A small gun with \"Milla\" engraved on the right side of its barrel. Its special attack steals enemy HP."
     },
     {
@@ -2786,6 +2949,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red gun is a prototype, so its finish is incomplete. Letters, which say \"i,\" are carved on the barrel."
     },
     {
@@ -2803,6 +2967,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The latest freeze gun uses latent heat energy to fire a freeze bomb. Its power to freeze is excellent."
     },
     {
@@ -2820,6 +2985,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "A government certified scientist created this high- performance rifle based on the A-35 rifle function."
     },
     {
@@ -2837,6 +3003,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "This weapon fires a punch bomb. It does great damage, but sequence attacks are not possible"
     },
     {
@@ -2854,6 +3021,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "Shaking the maracas with a Latin rhythm produces shock waves to damage enemies."
     },
     {
@@ -2871,6 +3039,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "These guns convert thought patterns into a laser beam to destroy enemies."
     },
     {
@@ -2888,6 +3057,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This huge drill weapon can be attached to your hand. It is a very powerful, short- range weapon."
     },
     {
@@ -2905,6 +3075,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A mysterious ultimate weapon. Its abilities are unknown."
     },
     {
@@ -2922,6 +3093,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "This red mechgun is a prototype, so its finish is incomplete. Letters, which say \"ff,\" are carved on the grip."
     },
     {
@@ -2939,6 +3111,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Indi Belra's right hand was remodeled into this enemy weapon. Its special attackis even more powerful..."
     },
     {
@@ -2956,6 +3129,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "It fires a very powerful rocket bomb.  Its special attack can confuse enemies."
     },
     {
@@ -2973,6 +3147,7 @@
       "stat": "55 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The stone on this cane increases your mental strength. Its special attack is lightning."
     },
     {
@@ -2990,6 +3165,7 @@
       "stat": "35 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "The windmill-shape gives this cane its power. In order to execute its special attack, hold the wind energy, and..."
     },
     {
@@ -3007,6 +3183,7 @@
       "stat": "35 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "The eyes on top of this cursed cane can kill enemies. Its special attack can also kill enemies."
     },
     {
@@ -3024,6 +3201,7 @@
       "stat": "50 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This magic cane was developed for female users. It's very popular and can be used as an accessory."
     },
     {
@@ -3041,6 +3219,7 @@
       "stat": "35 mst",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "Hildebear's skull was used to make this weapon. Its special attack will shoot fire."
     },
     {
@@ -3058,6 +3237,7 @@
       "stat": "35 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Hildeblue's skull was used to make this weapon. Its special attack triggers Gibarta. "
     },
     {
@@ -3075,6 +3255,7 @@
       "stat": "45 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "The rabbit's head on the tip of this cane looks very cute. People often use this cane as an accessory."
     },
     {
@@ -3092,6 +3273,7 @@
       "stat": "20 mst",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "A huge leaf. When equipped, it increases your mental strength by 20."
     },
     {
@@ -3109,6 +3291,7 @@
       "stat": "35 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This evil fork brings bad luck to the person who equips it. Its special attack steals enemy experience."
     },
     {
@@ -3126,6 +3309,7 @@
       "stat": "55 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Chao, a very popular character in this world, is on the end of this cane. Its value is priceless."
     },
     {
@@ -3143,6 +3327,7 @@
       "stat": "45 mst",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "This is a cleaning tool that was found in the ancient ruins. Something is carved on it.  It increases mental strength."
     },
     {
@@ -3160,6 +3345,7 @@
       "stat": "50 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "This magic book was found in the ancient ruins. It increases mental strength."
     },
     {
@@ -3177,6 +3363,7 @@
       "stat": "35 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This magic cane holds electric energy. Its special attack is Gizonde."
     },
     {
@@ -3194,6 +3381,7 @@
       "stat": "55 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "The star-shaped design increases mental strength. Its special attack causes a large shock."
     },
     {
@@ -3211,6 +3399,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "When you wave this magic fan once, it produces a strong wind, which blows enemies away."
     },
     {
@@ -3228,6 +3417,7 @@
       "stat": "40 mst",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Flames from both ends of this magic cane will burn enemies. Its special flame attack is very powerful."
     },
     {
@@ -3245,6 +3435,7 @@
       "stat": "40 mst",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "A first aid medical bag used in case of emergencies. It heals you if you own it."
     },
     {
@@ -3262,6 +3453,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "A Dragon's claw was used to make this weapon. Its special attack is Foie."
     },
     {
@@ -3279,6 +3471,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This is only available for female users. It's a very popular accessory, though it's not useful as a weapon."
     },
     {
@@ -3296,6 +3489,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Sinow Red's hands were remodeled into a weapon. Attack and defense are increased with its special attack."
     },
     {
@@ -3313,6 +3507,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "When you wave this magic fan once, it produces a very strong wind, which blows enemies away."
     },
     {
@@ -3330,6 +3525,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "This scythe is considered a work of art because of its intricate design. Its special attack confuses enemies."
     },
     {
@@ -3347,6 +3543,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "An antique model that's popular among certain hardcore fans. The power is as strong as the new model."
     },
     {
@@ -3364,6 +3561,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "This rifle was used as the military Android's primary weapon in a certain country."
     },
     {
@@ -3381,6 +3579,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "Baranz's parts were used to create this enemy weapon."
     },
     {
@@ -3398,6 +3597,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "It looks like it's just a cane, but on the tip, there is a gap that you may be able to place something in."
     },
     {
@@ -3415,6 +3615,7 @@
       "stat": "15 all",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A Laconiatask tempered with the Eclipse Torch's flame. Also known as \"Alis' Claw.\""
     },
     {
@@ -3432,6 +3633,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "An antique model that's popular among certain hardcore fans. The power is as strong as the new model."
     },
     {
@@ -3449,6 +3651,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "An antique model that's popular among certain hardcore fans. The power is as strong as the new model."
     },
     {
@@ -3466,6 +3669,7 @@
       "stat": "",
       "stars": 10,
       "version": 2,
+      "srank": false,
       "desc": "An antique model that's popular among certain hardcore fans. The power is as strong as the new model."
     },
     {
@@ -3483,6 +3687,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": false,
       "desc": "A special gun that shoots lighting. Its accuracy is top class."
     },
     {
@@ -3500,6 +3705,7 @@
       "stat": "",
       "stars": 11,
       "version": 2,
+      "srank": false,
       "desc": "Secret technique. Type \"URAENDING\" at the Title with the keyboard..."
     },
     {
@@ -3517,6 +3723,7 @@
       "stat": "",
       "stars": 9,
       "version": 2,
+      "srank": false,
       "desc": "A beautiful flower bouquet. It smells very nice."
     },
     {
@@ -3534,6 +3741,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3551,6 +3759,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3568,6 +3777,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3585,6 +3795,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3602,6 +3813,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3619,6 +3831,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3636,6 +3849,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3653,6 +3867,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3670,6 +3885,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3687,6 +3903,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3704,6 +3921,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3721,6 +3939,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3738,6 +3957,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3755,6 +3975,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3772,6 +3993,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3789,6 +4011,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3806,6 +4029,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3823,6 +4047,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3840,6 +4065,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3857,6 +4083,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3874,6 +4101,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3891,6 +4119,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3908,6 +4137,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3925,6 +4155,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     },
     {
@@ -3942,6 +4173,7 @@
       "stat": "",
       "stars": 12,
       "version": 2,
+      "srank": true,
       "desc": "A mysterious weapon. Its abilities are unknown."
     }
   ],
@@ -7190,7 +7422,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "KAPU KAPU",
@@ -7204,7 +7436,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "ANGEL'S WING",
@@ -7218,7 +7450,7 @@
       "boss": "Shifta/Deband",
       "charClass": 239,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "DEVIL'S WING",
@@ -7232,7 +7464,7 @@
       "boss": "Shifta/Deband",
       "charClass": 239,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "ELENOR",
@@ -7246,7 +7478,7 @@
       "boss": "Shifta/Deband",
       "charClass": 215,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "MARK3",
@@ -7260,7 +7492,7 @@
       "boss": "",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "MASTER SYSTEM",
@@ -7274,7 +7506,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "GENESIS",
@@ -7288,7 +7520,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "SEGA SATURN",
@@ -7302,7 +7534,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "DREAMCAST",
@@ -7316,7 +7548,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "HAMBURGER",
@@ -7330,7 +7562,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "PANZER'S TAIL",
@@ -7344,7 +7576,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     },
     {
       "name": "DAVIL'S TAIL",
@@ -7358,7 +7590,7 @@
       "boss": "Shifta/Deband",
       "charClass": 255,
       "type": "",
-      "version": 1
+      "version": 2
     }
   ],
   "drops": [
