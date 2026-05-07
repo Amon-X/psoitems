@@ -118,6 +118,7 @@ const WEAPON_NOTES = {
   "GULD MILLA":         { unobtainable: true },
   "TSUMIKIRI J-SWORD":  { unobtainable: true },
   "DOUBLE CANNON":      { unobtainable: true },
+  "AGITO (AUW 1975)": { notes:"Possibly a 1/311 drop in Very Hard for Skyly in V1 jp from a Booma" },
 };
 
 const ARMOR_NOTES = {
@@ -125,7 +126,7 @@ const ARMOR_NOTES = {
 };
 
 const SHIELD_NOTES = {
-  "SHIELD OF DELSABER": { enemyPart: "Delsabre's Left Arm", montague: true },
+  "SHIELD OF DELSABER": { enemyPart: "Delsabre's Left Arm", montague: true, altDropName: "Delsaber's Left Arm"},
   "BLUE RING":          { quest: "Towards the Future", notes: "Ultimate min kill SS-Rank" },
   "WHITE RING":         { challenge: "Obtain A-Rank in Challenge Mode" },
   "YELLOW RING":        { challenge: "Obtain B-Rank in Challenge Mode" },
