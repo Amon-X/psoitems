@@ -20,173 +20,77 @@ const CF = {
   RANGER:  0x20,
   FORCE:   0x40,
 };
+const MAG_GREEN = new Set(["Soniti","Churel","Preta","Pitri"]);
+const MAG_GOLD = new Set([
+  "PIAN",
+  "OPA-OPA",
+  "CHU CHU",
+  "CHAO",
+  "ROBOCHAO",
+  "OPA-OPA",
+  "PIAN",
+  "CHAO",
+  "ROBOCHAO",
+  "KAPU KAPU",
+  "ANGEL'S WING",
+  "DEVIL'S WING",
+  "ELENOR",
+  "MARK3",
+  "MASTER SYSTEM",
+  "GENESIS",
+  "SEGA SATURN",
+  "DREAMCAST",
+  "HAMBURGER",
+  "PANZER'S TAIL",
+  "DAVIL'S TAIL",
+  "Deva",
+  "Rati",
+  "Savitri",
+  "Rukmin",
+  "Pushan",
+  "Diwari",
+  "Sato",
+  "Bhima",
+  "Nidra"
+]);
+
+const FEED_ITEMS = ["Monomate","Dimate","Trimate","Monofluid","Difluid","Trifluid","Antidote","Antiparalysis","Sol Atomizer","Moon Atomizer","Star Atomizer"];
 const FEED_TABLES = [
-  // table 0
-  [
-    [3,3,5,40,5,0],
-    [3,3,10,45,5,0],
-    [4,4,15,50,10,0],
-    [3,3,5,0,5,40],
-    [3,3,10,0,5,45],
-    [4,4,15,0,10,50],
-    [3,3,5,10,40,0],
-    [3,3,5,0,44,10],
-    [4,1,15,30,15,25],
-    [4,1,15,25,15,30],
-    [6,5,25,25,25,25]
-  ],
+// [Table 0](ca://s?q=Edit_table_0)
+[[5,40,5,0,3,3],[10,45,5,0,3,3],[15,50,10,0,4,4],[5,0,5,40,3,3],[10,0,5,45,3,3],[15,0,10,50,4,4],[5,10,40,0,3,3],[5,0,44,10,3,3],[15,30,15,25,1,4],[15,25,15,30,1,4],[25,25,25,25,5,6]],
 
-  // table 1
-  [
-    [0,0,5,10,0,-1],
-    [2,1,6,15,3,-3],
-    [3,2,12,21,4,-7],
-    [0,0,5,0,0,8],
-    [2,1,7,0,3,13],
-    [3,2,7,-7,6,19],
-    [0,1,0,5,15,0],
-    [2,0,-1,0,14,5],
-    [-2,2,10,11,8,0],
-    [3,-2,9,0,9,11],
-    [4,3,14,9,18,11]
-  ],
+// [Table 1](ca://s?q=Edit_table_1)
+[[5,10,0,-1,0,0],[6,15,3,-3,1,2],[12,21,4,-7,2,3],[5,0,0,8,0,0],[7,0,3,13,1,2],[7,-7,6,19,2,3],[0,5,15,0,1,0],[-1,0,14,5,0,2],[10,11,8,0,2,-2],[9,0,9,11,-2,3],[14,9,18,11,3,4]],
 
-  // table 2
-  [
-    [0,-1,1,9,0,-5],
-    [3,0,1,13,0,-10],
-    [4,1,8,16,2,-15],
-    [0,-1,0,-5,0,9],
-    [3,0,4,-10,0,13],
-    [3,2,6,-15,5,17],
-    [-1,1,-5,4,12,-5],
-    [0,0,-5,-6,11,4],
-    [4,-2,0,11,3,-5],
-    [-1,1,4,-5,0,11],
-    [4,2,7,8,6,9]
-  ],
+// [Table 2](ca://s?q=Edit_table_2)
+[[1,9,0,-5,-1,0],[1,13,0,-10,0,3],[8,16,2,-15,1,4],[0,-5,0,9,-1,0],[4,-10,0,13,0,3],[6,-15,5,17,2,3],[-5,4,12,-5,1,-1],[-5,-6,11,4,0,0],[0,11,3,-5,-2,4],[4,-5,0,11,1,-1],[7,8,6,9,2,4]],
 
-  // table 3
-  [
-    [0,-1,0,3,0,0],
-    [2,0,5,7,0,-5],
-    [3,1,4,14,6,-10],
-    [0,0,0,0,0,4],
-    [0,1,4,-5,0,8],
-    [2,2,4,-10,3,15],
-    [-3,3,0,0,7,0],
-    [3,0,-4,-5,20,-5],
-    [3,-2,-10,9,6,9],
-    [-2,2,8,5,-8,7],
-    [3,2,7,7,7,7]
-  ],
+// [Table 3](ca://s?q=Edit_table_3)
+[[0,3,0,0,-1,0],[5,7,0,-5,0,2],[4,14,6,-10,1,3],[0,0,0,4,0,0],[4,-5,0,8,1,0],[4,-10,3,15,2,2],[0,0,7,0,3,-3],[-4,-5,20,-5,0,3],[-10,9,6,9,-2,3],[8,5,-8,7,2,-2],[7,7,7,7,2,3]],
 
-  // table 4
-  [
-    [2,-1,-5,9,-5,0],
-    [2,0,0,11,0,-10],
-    [0,1,4,14,0,-15],
-    [2,-1,-5,0,-6,10],
-    [2,0,0,-10,0,11],
-    [0,1,4,-15,0,15],
-    [2,-1,-5,-5,16,-5],
-    [-2,3,7,-3,0,-3],
-    [4,-2,5,21,-5,-20],
-    [3,0,-5,-20,5,21],
-    [3,2,4,6,8,5]
-  ],
+// [Table 4](ca://s?q=Edit_table_4)
+[[-5,9,-5,0,-1,2],[0,11,0,-10,0,2],[4,14,0,-15,1,0],[-5,0,-6,10,-1,2],[0,-10,0,11,0,2],[4,-15,0,15,1,0],[-5,-5,16,-5,-1,2],[7,-3,0,-3,3,-2],[5,21,-5,-20,-2,4],[-5,-20,5,21,0,3],[4,6,8,5,2,3]],
 
-  // table 5
-  [
-    [2,-1,-4,13,-5,-5],
-    [0,1,0,16,0,-15],
-    [2,0,3,19,-2,-18],
-    [2,-1,-4,-5,-5,13],
-    [0,1,0,-15,0,16],
-    [2,0,3,-20,0,19],
-    [0,1,5,-6,6,-5],
-    [-1,1,0,-4,14,-10],
-    [4,-1,4,17,-5,-15],
-    [2,0,-10,-15,5,21],
-    [3,2,2,8,3,6]
-  ],
+// [Table 5](ca://s?q=Edit_table_5)
+[[-4,13,-5,-5,-1,2],[0,16,0,-15,1,0],[3,19,-2,-18,0,2],[-4,-5,-5,13,-1,2],[0,-15,0,16,1,0],[3,-20,0,19,0,2],[5,-6,6,-5,1,0],[0,-4,14,-10,1,-1],[4,17,-5,-15,-1,4],[-10,-15,5,21,0,2],[2,8,3,6,2,3]],
 
-  // table 6
-  [
-    [-1,1,-3,9,-3,-4],
-    [2,0,0,11,0,-10],
-    [2,0,2,15,0,-16],
-    [-1,1,-3,-4,-3,9],
-    [2,0,0,-10,0,11],
-    [2,0,-2,-15,0,19],
-    [2,-1,0,6,9,-15],
-    [-2,3,0,-15,9,6],
-    [3,-1,9,-20,-5,17],
-    [0,2,-5,20,5,-20],
-    [3,2,0,11,0,11]
-  ],
+// [Table 6](ca://s?q=Edit_table_6)
+[[-3,9,-3,-4,1,-1],[0,11,0,-10,0,2],[2,15,0,-16,0,2],[-3,-4,-3,9,1,-1],[0,-10,0,11,0,2],[-2,-15,0,19,0,2],[0,6,9,-15,-1,2],[0,-15,9,6,3,-2],[9,-20,-5,17,-1,3],[-5,20,5,-20,2,0],[0,11,0,11,2,3]],
 
-  // table 7
-  [
-    [-1,0,-4,21,-15,-5],
-    [0,1,-1,27,-10,-16],
-    [2,0,5,29,-7,-25],
-    [-1,0,-10,-5,-10,21],
-    [0,1,-5,-16,-5,25],
-    [2,0,-7,-29,6,29],
-    [-1,1,-10,-10,28,-10],
-    [2,-1,9,-18,24,-15],
-    [2,1,19,18,-15,-20],
-    [2,1,-15,-20,19,18],
-    [4,2,3,7,3,3]
-  ],
-
-  // table 8
-  [
-    [-1,1,-3,9,-3,-4],
-    [2,0,0,11,0,-10],
-    [2,0,4,14,0,-15],
-    [-1,1,-3,-4,-3,9],
-    [2,0,0,-10,0,11],
-    [2,0,-4,-15,0,14],
-    [2,-1,0,6,9,-15],
-    [-2,3,0,-15,9,6],
-    [3,-1,10,-20,-5,17],
-    [0,2,-3,17,6,-20],
-    [3,2,0,10,0,10]
-  ],
-
-  // table 9
-  [
-    [2,-1,-4,13,-5,-5],
-    [0,1,0,16,0,-15],
-    [2,0,4,19,-4,-20],
-    [2,-1,-4,-5,-5,13],
-    [0,1,0,-15,0,16],
-    [2,0,4,-20,0,19],
-    [0,1,5,-6,6,-5],
-    [-1,1,0,-4,14,-10],
-    [4,-1,5,17,-5,-15],
-    [2,0,-10,-15,5,22],
-    [3,2,4,6,4,6]
-  ],
-
-  // table 10
-  [
-    [-1,0,-5,20,-15,-5],
-    [0,1,-2,25,-10,-16],
-    [2,0,5,29,-5,-27],
-    [-1,0,-10,-5,-10,20],
-    [0,1,-5,-16,-5,25],
-    [2,0,-5,-27,5,29],
-    [-1,1,-10,-10,28,-10],
-    [2,-1,8,-15,20,-15],
-    [2,1,18,17,-15,-20],
-    [2,1,-15,-20,18,18],
-    [4,2,3,4,3,4]
-  ]
+// [Table 7](ca://s?q=Edit_table_7)
+[[-4,21,-15,-5,0,-1],[-1,27,-10,-16,1,0],[5,29,-7,-25,0,2],[-10,-5,-10,21,0,-1],[-5,-16,-5,25,1,0],[-7,-29,6,29,0,2],[-10,-10,28,-10,1,-1],[9,-18,24,-15,-1,2],[19,18,-15,-20,1,2],[-15,-20,19,18,1,2],[3,7,3,3,2,4]]
 ];
 
+function renderFeedTable(tableIndex) {
+  const t = FEED_TABLES[tableIndex];
+  if (!t) return "";
+  const header = `<div class="feed-header"><span></span><span>DEF</span><span>POW</span><span>DEX</span><span>MIND</span><span>SYNCH</span><span>IQ</span></div>`;
+  const rows = FEED_ITEMS.map((name, i) => {
+    const [def, pow, dex, mind, synch, iq] = t[i];
+    return `<div class="feed-row"><span>${name}</span><span>${def}</span><span>${pow}</span><span>${dex}</span><span>${mind}</span><span>${synch}</span><span>${iq}</span></div>`;
+  }).join("");
+  return `<div class="feed-table">${header}${rows}</div>`;
+}
 // Each entry: [name, classFlags, maxAtp, maxMst, maxAta]
 // classFlags = the combined bitflag for that class (from newserv class_flags[])
 // maxAtp/maxMst/maxAta = GC V3 / BB V4 level-200 caps (from newserv max_stats_v3_v4[])
@@ -234,6 +138,7 @@ function decodeClasses(classFlags, atpReq, mstReq, ataReq) {
 // ---------------------------------------------------------------------------
 const WEAPON_NOTES = {
   // Enemy parts → Montague weapon conversion
+  /*
   "HILDEBEAR'S CANE":   { enemyPart: "Hildebear's Head",      montague: true },
   "HILDEBLUE'S CANE":   { enemyPart: "Hildeblue's Head",      montague: true },
   "P-ARMS'S BLADE":     { enemyPart: "P-arm's Arms",          montague: true },
@@ -245,6 +150,29 @@ const WEAPON_NOTES = {
   "DELSABER'S BUSTER":  { enemyPart: "Delsaber's Right Arm",  montague: true },
   "BRINGER'S RIFLE":    { enemyPart: "Bringer's Right Arm",   montague: true },
   "DRAGON'S CLAW":      { enemyPart: "Dragon's Claw",         montague: true },
+  */
+ // Enemy parts → Montague weapon conversion
+"RAPPY'S FAN":            { enemyPart: "Rappy's Wing",              montague: true },
+"BOOMA'S CLAW":           { enemyPart: "Booma's Right Arm",         montague: true },
+"GOBOOMA'S CLAW":         { enemyPart: "Gobooma's Right Arm",       montague: true },
+"GIGOBOOMA'S CLAW":       { enemyPart: "Gigobooma's Right Arm",     montague: true },
+"HILDEBEAR'S CANE":       { enemyPart: "Hildebear's Head",          montague: true },
+"HILDEBLUE'S CANE":       { enemyPart: "Hildeblue's Head",          montague: true },
+"DRAGON'S CLAW":          { enemyPart: "Dragon's Claw",             montague: true },
+"G-ASSASSIN'S SABERS":    { enemyPart: "Grass Assassin's Arms",     montague: true },
+"P-ARMS' BLADE":          { enemyPart: "P-arm's Arms",              montague: true },
+"S-BEAT'S BLADE":         { enemyPart: "S-beat's Arms",             montague: true },
+"S-RED'S BLADE":          { enemyPart: "S-red's Arms",              montague: true },
+"BARANZ LAUNCHER":        { enemyPart: "Parts of Baranz",           montague: true },
+"DELSABER'S BUSTER":      { enemyPart: "Delsaber's Right Arm",      montague: true },
+"SORCERER'S CANE":        { enemyPart: "Sorcerer's Right Arm",      montague: true },
+"BELRA CANNON":           { enemyPart: "Belra's Right Arm",         montague: true },
+"BRINGER'S RIFLE":        { enemyPart: "Bringer's Right Arm",       montague: true },
+"GI GUE BAZOOKA":         { enemyPart: "Gi Gue's Body",             montague: true },
+"GAL WIND":               { enemyPart: "Gal Gryphon's Wing",        montague: true },
+ "S-BERILL'S HANDS #0": {enemyPart: "Sinow Berill's Arms",          montague: true },
+
+/*
   // Quest rewards
   "EGG BLASTER":        { quest: "Towards the Future", notes: "Very Hard SS-Rank up to 15% weapon percent in two areas as well as hit\nVery Hard S-Rank up to 10% weapon percent in two areas as well as hit" },
   "NEI'S CLAW":         { quest: "Towards the Future", notes: "Very Hard SS-Rank up to 15% weapon percent in two areas as well as hit\nVery Hard S-Rank up to 10% weapon percent in two areas as well as hit" },
@@ -281,23 +209,136 @@ const WEAPON_NOTES = {
   "GULD MILLA":         { unobtainable: true },
   "TSUMIKIRI J-SWORD":  { unobtainable: true },
   "DOUBLE CANNON":      { unobtainable: true },
+  */
+  "S-BERILL'S HANDS #1": { Combine: "S-Berill's Hands #0", altDropName: "Berill Photon", combDropNames: "S-BERILL'S HANDS #0" },
+  "BLACK KING BAR": { Combine: "Monkey King Bar", altDropName: "Blue-black Stone", combDropNames: "MONKEY KING BAR" },
+  "DANCING HITOGATA": { Combine: "Hitogata", altDropName: "Book of Hitogata", combDropNames: "HITOGATA" },
+  "DIVINE PUNISHMENT": { Combine: "Heaven Punisher and Mille Marteaux", altDropName: "Divine Filter", combDropNames: "HEAVEN PUNISHER AND MILLE MARTEAUX" },
+  "AUTO-AIM SPECIAL": { Combine: "Heaven Punisher and Mille Marteaux", altDropName: "Lock-on Filter", combDropNames: "HEAVEN PUNISHER AND MILLE MARTEAUX" },
+  "MAGICAL PIECE": { Combine: "non-rare Wand-types weapon", altDropName: "Magic Rock Heart Key", combDropNames: "NON-RARE WAND-TYPES WEAPON" },
+  "SUMMIT MOON": { Combine: "non-rare Cane-type weapons", altDropName: "Magic Rock Moola", combDropNames: "NON-RARE CANE-TYPE WEAPONS" },
+  "RAINBOW BATON": { Combine: "non-rare Slicer-type weapons", altDropName: "Magic Stone Iritista", combDropNames: "NON-RARE SLICER-TYPE WEAPONS" },
+  "PLANTAIN HUGE FAN": { Combine: "Fatsia", altDropName: "Magic Water", combDropNames: "FATSIA" },
+  "PLANTAIN FAN": { Combine: "Plantain Leaf", altDropName: "Magic Water", combDropNames: "PLANTAIN LEAF" },
+  "DARK FLOW": { Combine: "non-rare Sword-type weapons", altDropName: "Parasitic Gene Flow", combDropNames: "NON-RARE SWORD-TYPE WEAPONS" },
+  "DARK METEOR": { Combine: "non-rare Shot-type weapons", altDropName: "Parasitic Gene Flow", combDropNames: "NON-RARE SHOT-TYPE WEAPONS" },
+  "DARK BRIDGE": { Combine: "non-rare Rod-type weapons", altDropName: "Parasitic Gene Flow", combDropNames: "NON-RARE ROD-TYPE WEAPONS" },
+  "EGG BLASTER": { Combine: "non-rare Handgun-type weapons", altDropName: "Parts of Egg Blaster", combDropNames: "NON-RARE HANDGUN-TYPE WEAPONS" },
+  "SNOW QUEEN": { Combine: "Frozen Shooter", altDropName: "Photon Booster", combDropNames: "FROZEN SHOOTER" },
+  "IRON FAUST": { Combine: "Panzer Faust", altDropName: "Photon Booster", combDropNames: "PANZER FAUST" },
+  "BURNING VISIT": { Combine: "Flame Visit", altDropName: "Photon Booster", combDropNames: "FLAME VISIT" },
+  "POWER MASER": { Combine: "Maser Beam", altDropName: "Photon Booster", combDropNames: "MASER BEAM" },
+  "TWINKLE STAR": { Combine: "non-rare Wand-type weapons", altDropName: "Star Amplifier", combDropNames: "NON-RARE WAND-TYPE WEAPONS" },
+  "LAVIS BLADE": { Combine: "Lavis Cannon", altDropName: "Syncesta", combDropNames: "LAVIS CANNON" },
+  "DOUBLE CANNON": { Combine: "Lavis Blade", altDropName: "Syncesta", combDropNames: "LAVIS BLADE" },
+  "LAVIS CANNON": { Combine: "Double Cannon", altDropName: "Syncesta", combDropNames: "DOUBLE CANNON" },
+"TOY HAMMER": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"SAMBA MARACAS": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"CHAMELEON SCYTHE": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"HARISEN BATTLE FAN": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"CRAZY TUNE": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"FLOWER CANE": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"AKIKO'S WOK": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"BROOM": { challenge: "Obtain S-Rank in Challenge Mode Offline" },
+"S-RANK SABER": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+
+"S-RANK SWORD": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK BLADE": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK PARTISAN": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK TWIN": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK CLAW": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK SLICER": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK GUN": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK MECHGUN": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK RIFLE": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK SHOT": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK CANE": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK WAND": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK ROD": { challenge: "Obtain S-Rank in Challenge Mode Episode 1 Online" },
+"S-RANK BAZOOKA": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK NEEDLE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK SCYTHE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK HAMMER": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK MOON": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK PSYCHOGUN": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK PUNCH": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK WINDMILL": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK HARISEN": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK KATANA": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK J-CUTTER": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK SWORDS": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK LAUNCHER": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK CARDS": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK KNUCKLE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+"S-RANK AXE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" }
+
 };
 
 const ARMOR_NOTES = {
-  "CHU CHU FEVER": { quest: "Sunset from the Secret Base" },
+  //"CHU CHU FEVER": { quest: "Sunset from the Secret Base" },
+  "LOVE HEART": { Combine: "Spirit Garment", altDropName: "Magic Rock Heart Key", combDropNames: "SPIRIT GARMENT" },
+  "SWEETHEART": { Combine: "Love Heart", altDropName: "Magic Rock Heart Key", combDropNames: "LOVE HEART" },
+  "AURA FIELD": { Combine: "Spirit Garment", altDropName: "Magic Rock Moola", combDropNames: "SPIRIT GARMENT" },
+  "PARASITE WEAR:De Rol": { Combine: "Stink Frame", altDropName: "Parasitic Cell Type D", combDropNames: "STINK FRAME", notes: "Parasitic Cell Type D may be purchased from Paganini in Gallon's Shop for 20 Photon Drops or in Anniversary Badge Shop for 6 Anniv. Gold Badges." },
+  "PARASITE WEAR:Nelgal": { Combine: "Parasite Wear: De Rol", altDropName: "Parasitic Cell Type D", combDropNames: "PARASITE WEAR:De Rol", notes: "Parasitic Cell Type D may be purchased from Paganini in Gallon's Shop for 20 Photon Drops or in Anniversary Badge Shop for 6 Anniv. Gold Badges."},
+  "PARASITE WEAR:Vajulla": { Combine: "Parasite Wear: Nelgal", altDropName: "Parasitic Cell Type D", combDropNames: "PARASITE WEAR:Nelgal", notes: "Parasitic Cell Type D may be purchased from Paganini in Gallon's Shop for 20 Photon Drops or in Anniversary Badge Shop for 6 Anniv. Gold Badges." },
+  "VIRUS ARMOR:Lafuteria": { Combine: "Parasite Wear: Vajulla", altDropName: "Parasitic Cell Type D", combDropNames: "PARASITE WEAR:Vajulla", notes: "Parasitic Cell Type D may be purchased from Paganini in Gallon's Shop for 20 Photon Drops or in Anniversary Badge Shop for 6 Anniv. Gold Badges." },
+  "BRIGHTNESS CIRCLE": { Combine: "Spirit Garment", altDropName: "Star Amplifier", combDropNames: "SPIRIT GARMENT" },
+  "HUNTER FIELD": { challenge: "Obtain B-Rank in Challenge Mode Episode 2 Online" },
+"RANGER FIELD": { challenge: "Obtain B-Rank in Challenge Mode Episode 2 Online" },
+"FORCE FIELD": { challenge: "Obtain B-Rank in Challenge Mode Episode 2 Online" },
 };
 
 const SHIELD_NOTES = {
-  "SHIELD OF DELSABER": { enemyPart: "Delsaber's Left Arm", montague: true },
+  //"SHIELD OF DELSABER": { enemyPart: "Delsaber's Left Arm", montague: true },
+  "SHIELD OF DELSABER":     { enemyPart: "Delsaber's Left Arm",       montague: true },
+  /*
   "BLUE RING":          { quest: "Towards the Future", notes: "Ultimate min kill SS-Rank" },
   "WHITE RING":         { challenge: "Obtain A-Rank in Challenge Mode" },
   "YELLOW RING":        { challenge: "Obtain B-Rank in Challenge Mode" },
   "RED RING":           { unobtainable: true },
   "SAFETY HEART":       { unobtainable: true },
+  */
+ "YELLOW RING": { challenge: "Obtain A-Rank in Challenge Mode Episode 2 Online" },
+  // Barrier → Amplifier → Merge conversions
+// Barrier → Amplifier → Merge conversions
+  "RESTA MERGE": { Combine: "RECOVERY BARRIER", altDropName: "Amplifier of Resta", combDropNames: "RECOVERY BARRIER" },
+  "ANTI MERGE": { Combine: "RECOVERY BARRIER", altDropName: "Amplifier of Anti", combDropNames: "RECOVERY BARRIER" },
+
+  "SHIFTA MERGE": { Combine: "ASSIST BARRIER", altDropName: "Amplifier of Shifta", combDropNames: "ASSIST BARRIER" },
+  "DEBAND MERGE": { Combine: "ASSIST BARRIER", altDropName: "Amplifier of Deband", combDropNames: "ASSIST BARRIER" },
+
+  "FOIE MERGE": { Combine: "RED BARRIER", altDropName: "Amplifier of Foie", combDropNames: "RED BARRIER" },
+  "GIFOIE MERGE": { Combine: "RED BARRIER", altDropName: "Amplifier of Gifoie", combDropNames: "RED BARRIER" },
+  "RAFOIE MERGE": { Combine: "RED BARRIER", altDropName: "Amplifier of Rafoie", combDropNames: "RED BARRIER" },
+  "RED MERGE": { Combine: "RED BARRIER", altDropName: "Amplifier of Red", combDropNames: "RED BARRIER" },
+
+  "BARTA MERGE": { Combine: "BLUE BARRIER", altDropName: "Amplifier of Barta", combDropNames: "BLUE BARRIER" },
+  "GIBARTA MERGE": { Combine: "BLUE BARRIER", altDropName: "Amplifier of Gibarta", combDropNames: "BLUE BARRIER" },
+  "RABARTA MERGE": { Combine: "BLUE BARRIER", altDropName: "Amplifier of Rabarta", combDropNames: "BLUE BARRIER" },
+  "BLUE MERGE": { Combine: "BLUE BARRIER", altDropName: "Amplifier of Blue", combDropNames: "BLUE BARRIER" },
+
+  "ZONDE MERGE": { Combine: "YELLOW BARRIER", altDropName: "Amplifier of Zonde", combDropNames: "YELLOW BARRIER" },
+  "GIZONDE MERGE": { Combine: "YELLOW BARRIER", altDropName: "Amplifier of Gizonde", combDropNames: "YELLOW BARRIER" },
+  "RAZONDE MERGE": { Combine: "YELLOW BARRIER", altDropName: "Amplifier of Razonde", combDropNames: "YELLOW BARRIER" },
+  "YELLOW MERGE": { Combine: "YELLOW BARRIER", altDropName: "Amplifier of Yellow", combDropNames: "YELLOW BARRIER" },
+  "EPSIGUARD": { Combine: "Stink Shield", altDropName: "Cladding of Epsilon", combDropNames: "STINK SHIELD" },
+  "DE ROL LE SHIELD": { Combine: "Stink Shield", altDropName: "De Rol Le Shell", combDropNames: "STINK SHIELD" },
+  "SAFETY HEART": { Combine: "Invisible Guard", altDropName: "Magic Rock Heart Key", combDropNames: "INVISIBLE GUARD" },
+"EPSIGUARD": { Combine: "Stink Shield", altDropName: "Cladding of Epsilon", combDropNames: "STINK SHIELD" },
+"DE ROL LE SHIELD": { Combine: "Stink Shield", altDropName: "De Rol Le Shell", combDropNames: "STINK SHIELD" },
+"GOD'S SHIELD SEIRYU": { challenge: "Obtain A-Rank in Challenge Mode Offline" },
+"GOD'S SHIELD GENBU": { challenge: "Obtain B-Rank in Challenge Mode Offline" },
+"GOD'S SHIELD SUZAKU": { challenge: "Obtain A-Rank in Challenge Mode Episode 1 Online" },
+"GOD'S SHIELD BYAKKO": { challenge: "Obtain B-Rank in Challenge Mode Episode 1 Online" },
+
+
+
   // BLACK RING has drop entries in GC (not unobtainable like PC/V2)
 };
 
 const MAG_NOTES = {
+  /*
   "PANZER'S TAIL":  { badge: "7 Bone Badges", notes: "Badges obtained in Mop Up 2 (4 badges) and Endless Nightmare 2 (2 badges)\nTrade badges for item in Towards the Future or Lost Soul Blade" },
   "HAMBURGER":      { quest: "Sunset from the Secret Base" },
   "CHU CHU":        { quest: "Sunset from the Secret Base" },
@@ -319,6 +360,7 @@ const MAG_NOTES = {
   "CHAO":           { magCell: "Heart of Chao",      altDropName: "Heart of Chao" },
   "DAVIL'S TAIL":   { unobtainable: true },
   "ELENOR":         { unobtainable: true },
+  */
 };
 
 // ---------------------------------------------------------------------------
@@ -515,7 +557,14 @@ function renderRows(rows, columns) {
   const fragment = document.createDocumentFragment();
   sorted.forEach(row => {
     const tr = document.createElement("tr");
-    if ((row.stars ?? 0) >= 9) tr.classList.add("rare");
+    if (row.srank)                                                          tr.classList.add("rare-srank");
+    else if (MAG_GREEN.has(row.name))                                       tr.classList.add("rare-mag-green");
+    else if (MAG_GOLD.has(row.name))                                        tr.classList.add("rare-mag-gold");
+    else if ((row.stars ?? 0) >= 9) 
+      {
+        tr.classList.add("rare-v1");
+        //console.log("rare added");
+      }
 
     columns.forEach(col => {
       const td = document.createElement("td");
@@ -646,6 +695,16 @@ function showDetail(tab, row) {
       <div>Master/Ability gives 1 ATA<br>Hero/Ability gives 1 ATA<br>God/Ability gives 2 ATA</div>
     </div>`);
   }
+  // Feed table (mags only)
+  if (tab === "mags" && row.feedTable !== undefined) {
+    const ft = renderFeedTable(row.feedTable);
+    if (ft) {
+      parts.push(`<div class="detail-section">
+        <div class="detail-section-title">Feed Table ${row.feedTable}</div>
+        ${ft}
+      </div>`);
+    }
+  }
 
   const ownDrops = matchDrops(row.name ?? "");
   if (ownDrops.length) {
@@ -680,7 +739,15 @@ function showDetail(tab, row) {
         ${note.montague ? `<div class="detail-note" style="margin-top:0.35rem">To convert to a weapon unlock Dr. Montague in offline quests and bring item to him in Today's Rate</div>` : ""}
       </div>`);
     }
-
+    if (note.Combine) {
+      const epDrops = matchDrops(note.enemyPart);
+      parts.push(`<div class="detail-section">
+        <div class="detail-section-title">Item Combination</div>
+        <div>${escHtml(note.Combine)} with ${escHtml(note.altDropName)}</div>
+        ${epDrops.length ? `<div class="detail-section-title" style="margin-top:0.4rem">Drop Information</div>${renderDropRows(epDrops)}` : ""}
+        ${note.montague ? `<div class="detail-note" style="margin-top:0.35rem">To convert to a weapon unlock Dr. Montague in offline quests and bring item to him in Today's Rate</div>` : ""}
+      </div>`);
+    }
     if (note.quest) {
       parts.push(`<div class="detail-section">
         <div class="detail-section-title">Quest Reward</div>
@@ -736,6 +803,21 @@ function showDetail(tab, row) {
             <div class="detail-section-title">Drop Information (${escHtml(name)})</div>
             ${renderDropRows(altDrops)}
           </div>`);
+        }
+      });
+    }
+    if (note.combDropNames) {
+      const list = Array.isArray(note.combDropNames)
+        ? note.combDropNames
+        : [note.combDropNames];
+
+      list.forEach(name => {
+        const combDropNames = matchDrops(name);
+        if (combDropNames.length) {
+          parts.push(`<div class="detail-section">
+        <div class="detail-section-title">Drop Information (${escHtml(name)})</div>
+        ${renderDropRows(combDropNames)}
+      </div>`);
         }
       });
     }

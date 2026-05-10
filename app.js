@@ -81,9 +81,9 @@ const WEAPON_NOTES = {
   "SUPPRESSED GUN":     { quest: "Soul of a Blacksmith", notes: "Trade blue material for item\nOnly once per character so decide if you would rather have SUPPRESSED GUN or GOD HANDS or TECHNICAL CROIZER" },
   "GOD HAND":           { quest: "Soul of a Blacksmith", notes: "Trade blue material for item\nOnly once per character so decide if you would rather have SUPPRESSED GUN or GOD HANDS or TECHNICAL CROIZER" },
   "TECHNICAL CROZIER":  { quest: "Soul of a Blacksmith", notes: "Trade blue material for item\nOnly once per character so decide if you would rather have SUPPRESSED GUN or GOD HANDS or TECHNICAL CROIZER" },
-  "CHAIN SAWD":         { quest: "Dawn of E-access" },
-  "FLAME VISIT":        { quest: "Dawn of E-access" },
-  "STING TIP":          { quest: "Dawn of E-access" },
+  "CHAIN SAWD":         { quest: "Dawn of eAccess" },
+  "FLAME VISIT":        { quest: "Dawn of eAccess" },
+  "STING TIP":          { quest: "Dawn of eAccess" },
   "OROTIAGITO":         { quest: "Seek My Master", notes: "Convert AGITO (AUW 1975) into OROTIAGITO at the tekker", altDropName: "AGITO (AUW 1975)" },
   "S-RANK SABER":       { challenge: "Obtain S-Rank in Challenge Mode" },
   "S-RANK SWORD":       { challenge: "Obtain S-Rank in Challenge Mode" },
@@ -256,6 +256,7 @@ const CLASS_NAMES = ["HUcast","HUmar","HUnewearl","RAcast","RAcaseal","RAmar","F
 // Tabs where class filtering applies (items have a classes/charClass bitflag)
 const CLASS_FILTER_TABS = new Set(["weapons","armor","shields","mags"]);
 
+
 // Mag name colour overrides — matches Form1.cs colouring logic
 const MAG_GREEN = new Set(["Soniti","Churel","Preta","Pitri"]);
 const MAG_GOLD  = new Set(["PIAN","OPA-OPA","CHAO","ROBOCHAO"]);
@@ -366,16 +367,18 @@ function renderTab(tab) {
   renderRows(rows, columns);
 }
 
+const MOBILE = () => window.innerWidth <= 768;
+
 function renderHeaders(columns) {
   const thead = document.getElementById("table-head");
   thead.innerHTML = "";
   const tr = document.createElement("tr");
 
-  columns.forEach(col => {
+  columns.forEach((col, index) => {
     const th = document.createElement("th");
     th.textContent = col.label;
     th.dataset.key = col.key;
-    if (col.width) th.style.width = col.width;
+    th.style.width = (index === 0 && MOBILE()) ? "280px" : col.width;
     th.addEventListener("click", () => sortByColumn(col.key));
     tr.appendChild(th);
   });
@@ -756,11 +759,13 @@ function showDetail(tab, row) {
   }
 
   content.innerHTML = parts.join("");
+  document.getElementById("detail-panel").classList.add("open");
 }
 
 function clearDetail() {
   document.getElementById("detail-placeholder").classList.remove("hidden");
   document.getElementById("detail-content").classList.add("hidden");
+  document.getElementById("detail-panel").classList.remove("open");
 }
 
 function escHtml(str) {
@@ -847,6 +852,9 @@ document.getElementById("section-filter-bar").querySelectorAll(".section-btn").f
     }
   });
 });
+
+// Close button — collapses the detail panel on mobile
+document.getElementById("detail-close-btn")?.addEventListener("click", clearDetail);
 
 // File upload input — wired up but no-op until WASM stub is implemented
 document.getElementById("data-file")?.addEventListener("change", e => {
