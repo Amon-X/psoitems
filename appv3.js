@@ -160,7 +160,7 @@ const WEAPON_NOTES = {
 "HILDEBLUE'S CANE":       { enemyPart: "Hildeblue's Head",          montague: true },
 "DRAGON'S CLAW":          { enemyPart: "Dragon's Claw",             montague: true },
 "G-ASSASSIN'S SABERS":    { enemyPart: "Grass Assassin's Arms",     montague: true },
-"P-ARMS' BLADE":          { enemyPart: "P-arm's Arms",              montague: true },
+"P-ARMS'S BLADE":          { enemyPart: "P-arm's Arms",              montague: true },
 "S-BEAT'S BLADE":         { enemyPart: "S-beat's Arms",             montague: true },
 "S-RED'S BLADE":          { enemyPart: "S-red's Arms",              montague: true },
 "BARANZ LAUNCHER":        { enemyPart: "Parts of Baranz",           montague: true },
@@ -168,7 +168,7 @@ const WEAPON_NOTES = {
 "SORCERER'S CANE":        { enemyPart: "Sorcerer's Right Arm",      montague: true },
 "BELRA CANNON":           { enemyPart: "Belra's Right Arm",         montague: true },
 "BRINGER'S RIFLE":        { enemyPart: "Bringer's Right Arm",       montague: true },
-"GI GUE BAZOOKA":         { enemyPart: "Gi Gue's Body",             montague: true },
+"GI GUE BAZOOKA":         { enemyPart: "Gi Gue's body",             montague: true },
 "GAL WIND":               { enemyPart: "Gal Gryphon's Wing",        montague: true },
  "S-BERILL'S HANDS #0": {enemyPart: "Sinow Berill's Arms",          montague: true },
 
@@ -627,10 +627,64 @@ const SECTION_ID_COLORS = [
   "#E9967A","#FF4444","#FF8C00","#FFD700","#A0A0A0",
 ];
 function sectionIdName(id) { return SECTION_ID_NAMES[id] ?? String(id); }
+function showDropDiagnostics(itemName) {
+  const data = window.PSO_DATA;
+  if (!data) { console.log("No PSO_DATA"); return; }
+
+  console.log("target raw:", JSON.stringify(itemName));
+  console.log("target normalized:", JSON.stringify(normalizeName(itemName)));
+  console.log("target codepoints:", Array.from(String(itemName || "")).map(c => c.codePointAt(0).toString(16)).join(" "));
+
+  (data.drops ?? []).forEach((d, i) => {
+    if (!d || d.itemName == null) return;
+    const raw = d.itemName;
+    const norm = normalizeName(raw);
+    if (norm === normalizeName(itemName)) {
+      console.log("MATCH at drops index", i, "raw:", JSON.stringify(raw), "norm:", JSON.stringify(norm));
+    } else if (raw.toLowerCase().includes("p-arm") || norm.includes("p-arm") || norm.includes("parm")) {
+      console.log("CANDIDATE at drops index", i, "raw:", JSON.stringify(raw), "norm:", JSON.stringify(norm));
+      console.log("codepoints:", Array.from(raw).map(c => c.codePointAt(0).toString(16)).join(" "));
+    }
+  });
+
+  (data.drops_ep2 ?? []).forEach((d, i) => {
+    if (!d || d.itemName == null) return;
+    const raw = d.itemName;
+    const norm = normalizeName(raw);
+    if (norm === normalizeName(itemName)) {
+      console.log("MATCH at drops_ep2 index", i, "raw:", JSON.stringify(raw), "norm:", JSON.stringify(norm));
+    } else if (raw.toLowerCase().includes("p-arm") || norm.includes("p-arm") || norm.includes("parm")) {
+      console.log("CANDIDATE ep2 index", i, "raw:", JSON.stringify(raw), "norm:", JSON.stringify(norm));
+      console.log("codepoints:", Array.from(raw).map(c => c.codePointAt(0).toString(16)).join(" "));
+    }
+  });
+}
 
 // ---------------------------------------------------------------------------
 // Detail panel
 // ---------------------------------------------------------------------------
+/*
+function normalizeName(s) {
+  if (s == null) return "";
+  return String(s)
+    .trim()
+    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")   // curly single quotes -> '
+    .replace(/[\u2013\u2014]/g, "-")               // en/em dash -> hyphen
+    .replace(/\u00A0/g, " ")                       // NBSP -> space
+    .replace(/\uFEFF/g, "")                        // BOM -> remove
+    .normalize("NFKC")
+    .toLowerCase();
+}
+
+function matchDrops(itemName) {
+  const data = window.PSO_DATA;
+  if (!data) return [];
+  const target = normalizeName(itemName);
+  const ep1 = (data.drops ?? []).filter(d => normalizeName(d.itemName) === target);
+  const ep2 = (data.drops_ep2 ?? []).filter(d => normalizeName(d.itemName) === target);
+  return [...ep1, ...ep2];
+}
+*/
 function matchDrops(itemName) {
   const data = window.PSO_DATA;
   if (!data) return [];
@@ -640,7 +694,11 @@ function matchDrops(itemName) {
 }
 
 function renderDropRows(drops) {
-  if (!drops.length) return "";
+  if (!drops.length){
+    //console.log("drops length 0");
+    return "";
+  }
+  //console.log("drops rendered");
   return drops.map(d => {
     const monsterStr = d.monster ? d.monster.trim() : "";
     const source = monsterStr && monsterStr !== " " && monsterStr !== "0x00"
@@ -656,6 +714,7 @@ function renderDropRows(drops) {
       <span>${d.dropRatio ?? ""}</span>
     </div>`;
   }).join("");
+
 }
 
 function showDetail(tab, row) {
@@ -794,7 +853,26 @@ function showDetail(tab, row) {
         </div>`);
       }
     }
+    if (note.altDropNames) {
+      const list = Array.isArray(note.altDropNames)
+        ? note.altDropNames
+        : [note.altDropNames];
 
+      list.forEach(name => {
+        const altDropNames = matchDrops(name);
+        if (altbDropNames.length) {
+          parts.push(`<div class="detail-section">
+        <div class="detail-section-title">Drop Information (${escHtml(name)})</div>
+        ${renderDropRows(altDropNames)}
+      </div>`);
+        }
+        else {
+          //console.log("alt Drop 0");
+        }
+      });
+    }
+
+/*
     if (note.altDropNames) {
       note.altDropNames.forEach(name => {
         const altDrops = matchDrops(name);
@@ -805,7 +883,7 @@ function showDetail(tab, row) {
           </div>`);
         }
       });
-    }
+    }*/
     if (note.combDropNames) {
       const list = Array.isArray(note.combDropNames)
         ? note.combDropNames
