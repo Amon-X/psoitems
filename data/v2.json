@@ -2248,7 +2248,7 @@
       "stars": 12,
       "version": 1,
       "srank": false,
-      "desc": "A mysterious cane known only as the ultimate cane. Its abilities are unknown."
+      "desc": "A one-handed axe with a Photon blade. Its special attack steals HP."
     },
     {
       "name": "HEAVEN PUNISHER",
@@ -2266,7 +2266,7 @@
       "stars": 12,
       "version": 1,
       "srank": false,
-      "desc": "The ultimate gun, a weapon veiled in mystery. \"Divine Punishment,\"  its special attack, is based on time..."
+      "desc": "A large sword with small, spinning Photon blades. Its special attack steals enemy HP."
     },
     {
       "name": "LAVIS CANNON",
@@ -2284,7 +2284,7 @@
       "stars": 12,
       "version": 1,
       "srank": false,
-      "desc": "Few facts or even rumors are known about this ultimate sword. Its abilities are a mystery."
+      "desc": "A special cane created based on a legendary holy cane. Casts Foie as a special attack."
     },
     {
       "name": "VICTOR AXE",
@@ -2302,7 +2302,7 @@
       "stars": 9,
       "version": 1,
       "srank": false,
-      "desc": "A one-handed axe with a Photon blade. Its special attack steals HP."
+      "desc": "A special battle cane with needles on its tip. Its special attack steals TP."
     },
     {
       "name": "CHAIN SAWD",
@@ -2320,7 +2320,7 @@
       "stars": 11,
       "version": 1,
       "srank": false,
-      "desc": "A large sword with small, spinning Photon blades. Its special attack steals enemy HP."
+      "desc": "A special magical cane with the magic rock Heart Key on its tip. It can cast Zonde without TP cost."
     },
     {
       "name": "CADUCEUS",
@@ -2338,7 +2338,7 @@
       "stars": 11,
       "version": 1,
       "srank": false,
-      "desc": "A special cane created based on a legendary holy cane. Casts Foie as a special attack."
+      "desc": "A special magical cane for Forces, made by an adept in science and magic. Casts Barta."
     },
     {
       "name": "STING TIP",
@@ -2356,7 +2356,7 @@
       "stars": 10,
       "version": 1,
       "srank": false,
-      "desc": "A special battle cane with needles on its tip. Its special attack steals TP."
+      "desc": "A mysterious cane known only as the ultimate cane. Its abilities are unknown."
     },
     {
       "name": "MAGICAL PIECE",
@@ -2374,7 +2374,7 @@
       "stars": 11,
       "version": 1,
       "srank": false,
-      "desc": "A special magical cane with the magic rock Heart Key on its tip. It can cast Zonde without TP cost."
+      "desc": "The ultimate gun, a weapon veiled in mystery. \"Divine Punishment,\"  its special attack, is based on time..."
     },
     {
       "name": "TECHNICAL CROZIER",
@@ -2392,7 +2392,7 @@
       "stars": 10,
       "version": 1,
       "srank": false,
-      "desc": "A special magical cane for Forces, made by an adept in science and magic. Casts Barta."
+      "desc": "Few facts or even rumors are known about this ultimate sword. Its abilities are a mystery."
     },
     {
       "name": "SUPPRESSED GUN",
@@ -3004,7 +3004,7 @@
       "stars": 12,
       "version": 2,
       "srank": false,
-      "desc": "This weapon fires a punch bomb. It does great damage, but sequence attacks are not possible."
+      "desc": "This weapon fires a punch bomb. It does great damage, but sequence attacks are not possible"
     },
     {
       "name": "SAMBA MARACAS",
@@ -3295,7 +3295,7 @@
       "desc": "This evil fork brings bad luck to the person who equips it. Its special attack steals enemy experience."
     },
     {
-      "name": "STRIKER OF CHAO",
+      "name": "STIRKER OF CHAO",
       "classes": 255,
       "minAtp": 600,
       "maxAtp": 700,
@@ -3309,7 +3309,8 @@
       "stat": "55 mst",
       "stars": 12,
       "version": 2,
-      "srank": false
+      "srank": false,
+      "desc": "Chao, a very popular character in this world, is on the end of this cane. Its value is priceless."
     },
     {
       "name": "BROOM",
@@ -4318,7 +4319,8 @@
       "evpRange": 2,
       "stars": 3,
       "stat": "",
-      "version": 1
+      "version": 1,
+      "desc": "Protective gear for the body. Boosts defense for Hunters and Rangers."
     },
     {
       "name": "Hyper Frame",

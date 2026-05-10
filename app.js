@@ -111,7 +111,7 @@ const WEAPON_NOTES = {
   "S-RANK J-BLADE":     { challenge: "Obtain S-Rank in Challenge Mode" },
   "S-RANK J-CUTTER":    { challenge: "Obtain S-Rank in Challenge Mode" },
   "HEART OF POUMN":     { quest: "Rappy's Holiday", notes: "Beat 'Gallon's Treachery' perfectly and obtain shiva stone" },
-  "STRIKER OF CHAO":    { quest: "Towards the Future", notes: "Convert BRANCH OF PAKUPAKU. Play with a branch in your inventory, step into the sparkly in the hospital, then stand under the waterfall in r1 until the chao starts yammering at you\nDo the same with the STIRKER OF CHAO to convert it back", altDropName: "BRANCH OF PAKUPAKU" },
+  "STIRKER OF CHAO":    { quest: "Towards the Future", notes: "Convert BRANCH OF PAKUPAKU. Play with a branch in your inventory, step into the sparkly in the hospital, then stand under the waterfall in r1 until the chao starts yammering at you\nDo the same with the STIRKER OF CHAO to convert it back", altDropName: "BRANCH OF PAKUPAKU" },
   "Soul Eater":         { quest: "from the depth", notes: "Obtained after doing the Sue subplot. Don't tell Sue your name." },
   "SONIC KNUCKLE":      { quest: "Tinkerbell's dog 2", notes: "Beat Sonic at Rock Paper Scissors to obtain item\ntrade item in central dome fire swirl for SONIC KNUCKLE" },
   "AKIKO'S FRYING PAN": { quest: "Secret Delivery", notes: "after you get the 'weapons approval'" },
@@ -256,7 +256,6 @@ const CLASS_NAMES = ["HUcast","HUmar","HUnewearl","RAcast","RAcaseal","RAmar","F
 // Tabs where class filtering applies (items have a classes/charClass bitflag)
 const CLASS_FILTER_TABS = new Set(["weapons","armor","shields","mags"]);
 
-
 // Mag name colour overrides — matches Form1.cs colouring logic
 const MAG_GREEN = new Set(["Soniti","Churel","Preta","Pitri"]);
 const MAG_GOLD  = new Set(["PIAN","OPA-OPA","CHAO","ROBOCHAO"]);
@@ -367,18 +366,16 @@ function renderTab(tab) {
   renderRows(rows, columns);
 }
 
-const MOBILE = () => window.innerWidth <= 768;
-
 function renderHeaders(columns) {
   const thead = document.getElementById("table-head");
   thead.innerHTML = "";
   const tr = document.createElement("tr");
 
-  columns.forEach((col, index) => {
+  columns.forEach(col => {
     const th = document.createElement("th");
     th.textContent = col.label;
     th.dataset.key = col.key;
-    th.style.width = (index === 0 && MOBILE()) ? "280px" : col.width;
+    if (col.width) th.style.width = col.width;
     th.addEventListener("click", () => sortByColumn(col.key));
     tr.appendChild(th);
   });
@@ -759,13 +756,11 @@ function showDetail(tab, row) {
   }
 
   content.innerHTML = parts.join("");
-  document.getElementById("detail-panel").classList.add("open");
 }
 
 function clearDetail() {
   document.getElementById("detail-placeholder").classList.remove("hidden");
   document.getElementById("detail-content").classList.add("hidden");
-  document.getElementById("detail-panel").classList.remove("open");
 }
 
 function escHtml(str) {
@@ -852,9 +847,6 @@ document.getElementById("section-filter-bar").querySelectorAll(".section-btn").f
     }
   });
 });
-
-// Close button — collapses the detail panel on mobile
-document.getElementById("detail-close-btn")?.addEventListener("click", clearDetail);
 
 // File upload input — wired up but no-op until WASM stub is implemented
 document.getElementById("data-file")?.addEventListener("change", e => {
