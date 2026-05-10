@@ -909,6 +909,7 @@ function showDetail(tab, row) {
   }
 
   content.innerHTML = parts.join("");
+  document.getElementById("detail-panel").classList.add("open");
 }
 
 function clearDetail() {
@@ -988,6 +989,9 @@ document.getElementById("class-filter-bar").querySelectorAll(".class-btn").forEa
     }
   });
 });
+
+// Close button — collapses the detail panel on mobile
+document.getElementById("detail-close-btn")?.addEventListener("click", clearDetail);
 
 document.getElementById("section-filter-bar").querySelectorAll(".section-btn").forEach(btn => {
   btn.addEventListener("click", () => {

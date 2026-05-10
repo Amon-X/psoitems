@@ -368,7 +368,7 @@ function renderTab(tab) {
 }
 
 const MOBILE = () => window.innerWidth <= 768;
-
+/*
 function renderHeaders(columns) {
   const thead = document.getElementById("table-head");
   thead.innerHTML = "";
@@ -384,7 +384,35 @@ function renderHeaders(columns) {
   });
 
   thead.appendChild(tr);
+}*/
+// Helper: call after you update the thead
+function forceHeaderReflow(selector = '#table-head') {
+  const thead = document.querySelector(selector);
+  if (!thead) return;
+  thead.style.display = 'none';
+  void thead.offsetHeight; // force reflow
+  thead.style.display = '';
 }
+
+// Updated renderHeaders with reflow
+function renderHeaders(columns) {
+  const thead = document.getElementById("table-head");
+  thead.innerHTML = "";
+  const tr = document.createElement("tr");
+  columns.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col.label;
+    th.dataset.key = col.key;
+    if (col.width) th.style.width = col.width;
+    th.addEventListener("click", () => sortByColumn(col.key));
+    tr.appendChild(th);
+  });
+  thead.appendChild(tr);
+
+  // Force reflow so position:sticky recalculates correctly
+  forceHeaderReflow('#table-head');
+}
+
 
 function renderRows(rows, columns) {
   const tbody = document.getElementById("table-body");
