@@ -234,7 +234,8 @@ const TAB_COLUMNS = {
     { key: "sectionId",  label: "Section ID",  width: "80px"  },
     { key: "monster",    label: "Monster",     width: "130px" },
     { key: "dropRatio",  label: "Drop Rate",   width: "70px"  },
-    { key: "dropPct",    label: "Drop %",      width: "65px"  },
+    { key: "dropRate",  label: "Drop %",   width: "70px"  },
+    { key: "dropPct",    label: "Enemy Drop %",      width: "65px"  },
     { key: "itemName",   label: "Item",        width: "160px" },
     { key: "area",       label: "Area",        width: "70px"  },
   ],
@@ -403,7 +404,7 @@ function renderHeaders(columns) {
     const th = document.createElement("th");
     th.textContent = col.label;
     th.dataset.key = col.key;
-    if (col.width) th.style.width = col.width;
+    if (col.width) { th.style.width = col.width; th.style.setProperty("--col-width", col.width); }
     th.addEventListener("click", () => sortByColumn(col.key));
     tr.appendChild(th);
   });
@@ -420,7 +421,7 @@ function renderRows(rows, columns) {
 
   const term = searchTerm.toLowerCase();
   let filtered = term
-    ? rows.filter(r => String(r.name ?? "").toLowerCase().includes(term))
+    ? rows.filter(r => String(r.name ?? r.itemName ?? "").toLowerCase().includes(term))
     : rows;
 
   if (classFilter && CLASS_FILTER_TABS.has(currentTab)) {

@@ -521,6 +521,7 @@ nav#tab-bar {
   #item-table td {
     padding: 0.35rem 0.5rem;
     vertical-align: middle;
+    min-width: var(--col-width, 45px);
   }
 
   #item-table th:first-child,
