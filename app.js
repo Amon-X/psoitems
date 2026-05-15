@@ -441,10 +441,26 @@ function renderRows(rows, columns) {
     filtered = filtered.filter(r => r.sectionId === sectionFilter);
   }
 
+  const DIFF_ORDER = ["Normal","Hard","Very Hard","Ultimate"];
+  const AREA_ORDER = ["Forest 1","Forest 2","Cave 1","Cave 2","Cave 3","Mine 1","Mine 2","Ruins 1","Ruins 2","Ruins 3"];
+
   const sorted = sortCol
     ? [...filtered].sort((a, b) => {
         const av = a[sortCol] ?? "";
         const bv = b[sortCol] ?? "";
+        if (sortCol === "dropRatio") {
+          const da = parseFloat(String(av).split("/")[1]) || Infinity;
+          const db = parseFloat(String(bv).split("/")[1]) || Infinity;
+          return (da - db) * sortDir;
+        }
+        if (sortCol === "difficulty") {
+          const da = DIFF_ORDER.indexOf(av); const db = DIFF_ORDER.indexOf(bv);
+          return ((da < 0 ? 99 : da) - (db < 0 ? 99 : db)) * sortDir;
+        }
+        if (sortCol === "area") {
+          const da = AREA_ORDER.indexOf(av); const db = AREA_ORDER.indexOf(bv);
+          return ((da < 0 ? 99 : da) - (db < 0 ? 99 : db)) * sortDir;
+        }
         const numA = parseFloat(av);
         const numB = parseFloat(bv);
         if (!isNaN(numA) && !isNaN(numB)) return (numA - numB) * sortDir;
@@ -561,6 +577,16 @@ function matchDrops(itemName, data) {
   return (data.drops ?? []).filter(d => d.itemName === itemName);
 }
 
+function findItemByName(name) {
+  const data = window.PSO_DATA;
+  if (!data) return null;
+  for (const tab of ["weapons","armor","shields","units","mags"]) {
+    const found = (data[tab] ?? []).find(r => r.name === name);
+    if (found) return { tab, row: found };
+  }
+  return null;
+}
+
 function otherVersion() {
   return currentVersion === "v1" ? "v2" : "v1";
 }
@@ -610,6 +636,11 @@ function sectionIdName(id) {
 }
 
 function showDetail(tab, row) {
+  if (tab === "drops") {
+    const found = findItemByName(row.itemName ?? "");
+    if (found) { showDetail(found.tab, found.row); return; }
+  }
+
   const placeholder = document.getElementById("detail-placeholder");
   const content     = document.getElementById("detail-content");
 

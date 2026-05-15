@@ -270,12 +270,53 @@ const WEAPON_NOTES = {
 "S-RANK LAUNCHER": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
 "S-RANK CARDS": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
 "S-RANK KNUCKLE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
-"S-RANK AXE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" }
+"S-RANK AXE": { challenge: "Obtain S-Rank in Challenge Mode Episode 2 Online" },
+/*
+"DRAGON SLAYER":        { quest: "Subterranean Den", notes: "Ultimate difficulty, Hunter, comes with 25% A Beast 25 Hit"}, 
+"JUSTY-23ST":        { quest: "Subterranean Den", notes: "Ultimate difficulty, Ranger, comes with 25% A Beast 25 Hit"}, 
+"Laser":        { quest: "Subterranean Den", notes: "Very Hard difficulty, Ranger, comes with +5" }, 
+"Blaster":        { quest: "Subterranean Den", notes: "Hard difficulty, Ranger, comes with +5" }, 
+"Rifle":        { quest: "Subterranean Den", notes: "Normal difficulty, Ranger, comes with +5" }, 
 
+"Calibur":        { quest: "Subterranean Den", notes: "Very Hard difficulty, Ranger, comes with +5" }, 
+"Breaker":        { quest: "Subterranean Den", notes: "Hard difficulty, Ranger, comes with +5" }, 
+"Sword":        { quest: "Subterranean Den", notes: "Normal difficulty, Ranger, comes with +5" }, 
+
+"CROSS SCAR":        { quest: "Waterway Shadow", notes: "Ultimate difficulty, Hunter, comes with 25% A Beast 25 Hit"}, 
+"L&K14 COMBAT":        { quest: "Waterway Shadow", notes: "Ultimate difficulty, Ranger, comes with 25% A Beast 25 Hit"}, 
+"Vulcan":        { quest: "Waterway Shadow", notes: "Very Hard difficulty, Ranger, comes with +9" }, 
+"Repeater":        { quest: "Waterway Shadow", notes: "Hard difficulty, Ranger, comes with +15" }, 
+"Mechgun":        { quest: "Waterway Shadow", notes: "Normal difficulty, Ranger, comes with +9" }, 
+
+"Ripper":        { quest: "Waterway Shadow", notes: "Very Hard difficulty, Ranger, comes with +10" }, 
+"Edge":        { quest: "Waterway Shadow", notes: "Hard difficulty, Ranger, comes with +10" }, 
+"Blade":        { quest: "Waterway Shadow", notes: "Normal difficulty, Ranger, comes with +10" }, 
+
+"DISKA OF BRAVEMAN":        { quest: "Central Control", notes: "Ultimate difficulty, Hunter, comes with 25% A Beast 25 Hit"}, 
+"FINAL IMPACT":        { quest: "Central Control", notes: "Ultimate difficulty, Ranger, comes with 25% A Beast 25 Hit"}, 
+"Arms":        { quest: "Central Control", notes: "Very Hard difficulty, Ranger, comes with +10" }, 
+"Cannon":        { quest: "Central Control", notes: "Hard difficulty, Ranger, comes with +15" }, 
+"Shot":        { quest: "Central Control", notes: "Normal difficulty, Ranger, comes with +15" }, 
+
+"Diska":        { quest: "Central Control", notes: "Very Hard difficulty, Ranger, comes with +10" }, 
+"Cutter":        { quest: "Central Control", notes: "Hard difficulty, Ranger, comes with +15" }, 
+"Slicer":        { quest: "Central Control", notes: "Normal difficulty, Ranger, comes with +15" }, 
+
+"GOD HAND":        { quest: "Soul of a Blacksmith", notes: "Ultimate Difficulty, trade Blue Mineral for Blade" }, 
+"SUPPRESSED GUN":        { quest: "Soul of a Blacksmith", notes: "Ultimate Difficulty, trade Blue Mineral for Gun" }, 
+"TECHNICAL CROZIER":        { quest: "Soul of a Blacksmith", notes: "Ultimate Difficulty, trade Blue Mineral for Staff" }, 
+*/
+"OROTIAGITO":        { quest: "Seek my Master", notes: "Talk to tekker near bank with Agito (1975) in inventory. Once per Character.", altDropName: "AGITO (AUW 1975)"}, 
+"STIRKER OF CHAO":    { quest: "Towards the Future", notes: "Convert BRANCH OF PAKUPAKU. Play with a branch in your inventory, step into the sparkly in the hospital, then stand under the waterfall in r1 until the chao starts yammering at you\nDo the same with the STIRKER OF CHAO to convert it back", altDropName: "BRANCH OF PAKUPAKU" },
+// bb "KAN'EI TSUHO":        { quest: "Gallon's Plan", notes: "10 Photon Tickets. " }, 
+//"LOLLIPOP":        { quest: "Gallon's Plan", notes: "15 Photon Drops. " }, 
+"NEI'S CLAW":        { quest: "Gallon's Plan", notes: "20 Photon Tickets. " }, 
+"Akikos Frying Pan": { quest: "Secret Delivery", notes:"Before teleporting down talk to the guy by the principals warp about weapons, find each member on pioneer 2 (Value of Money, Gran Squall, Lost Blade, Claiming a Stake), redo Secret Delivery and talk to the same guy next to the principals warp" },
 };
 
 const ARMOR_NOTES = {
   //"CHU CHU FEVER": { quest: "Sunset from the Secret Base" },
+  //"STEALTH SUIT":        { quest: "Gallon's Plan", notes: "20 Photon Tickets. 1 Photon Ticket on Normal and Hard difficulty, answering \"yes\" to Alicia, 2 for Very Hard and Ultimate" }, 
   "LOVE HEART": { Combine: "Spirit Garment", altDropName: "Magic Rock Heart Key", combDropNames: "SPIRIT GARMENT" },
   "SWEETHEART": { Combine: "Love Heart", altDropName: "Magic Rock Heart Key", combDropNames: "LOVE HEART" },
   "AURA FIELD": { Combine: "Spirit Garment", altDropName: "Magic Rock Moola", combDropNames: "SPIRIT GARMENT" },
@@ -332,6 +373,11 @@ const SHIELD_NOTES = {
 "GOD'S SHIELD SUZAKU": { challenge: "Obtain A-Rank in Challenge Mode Episode 1 Online" },
 "GOD'S SHIELD BYAKKO": { challenge: "Obtain B-Rank in Challenge Mode Episode 1 Online" },
 
+//"BLACK RING":         { quest: "Towards the Future", notes: " Very Hard or Ultimate min kill SS-Rank"},
+"RAGOL RING": { quest: "Seat of the Heart"},
+"PURPLE RING":         { quest: "Towards the Future", notes: " Very Hard or Ultimate SS-Rank min or max kill. once per character"},
+"WHITE RING":         { quest: "Labyrinthine Trial", notes: "Get S-rank in the 'Labyrinth Trial' quest. To do this, you need to have four people all split up among the different routes, get 29 capsules, all head back to Pioneer 2, then take the teleporter to Ragol again to find the last one. ", },
+//"ANTI-DARK RING": { quest: "Tyrell's Ego", notes: "Full Clear under 1 hour. Once per character. Should say 1054 enemies defeated before entering boss teleporter to Dark Falz" },
 
 
   // BLACK RING has drop entries in GC (not unobtainable like PC/V2)
@@ -361,6 +407,30 @@ const MAG_NOTES = {
   "DAVIL'S TAIL":   { unobtainable: true },
   "ELENOR":         { unobtainable: true },
   */
+  "CHU CHU":        { magCell: "Heart of Chu Chu", notes:"Level 50+ mag Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern",   altDropName: "Heart of Chu Chu" },
+  "KAPU KAPU":      { magCell: "Heart of KAPU KAPU",  altDropName: "Heart of KAPU KAPU", notes:"Level 100+ mag Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern"  },
+  "ROBOCHAO":       { magCell: "Parts of RoboChao",  altDropName: "Parts of RoboChao", notes: "Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern" },
+  "OPA-OPA":        { magCell: "Heart of Opa Opa",   altDropName: "Heart of Opa Opa", notes: "Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern" },
+  "PIAN":           { magCell: "Heart of Pian",      altDropName: "Heart of Pian", notes: "Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern" },
+  "CHAO":           { magCell: "Heart of Chao",      altDropName: "Heart of Chao", notes: "Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern" },
+  "ELENOR":         { unobtainable: true },
+  "ELENA":         { unobtainable: true },
+  "Soniti":         { magCell: "Cell of MAG 502", notes: "ID Type A (viridia, skyly, purplenum, redria, yellowboze) Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern", altDropName: "Cell of MAG 502" },
+  "Pitri":          { magCell: "Cell of MAG 502", notes: "ID Type B (greenill, bluefull, pinkal, oran, whitill) Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern",  altDropName: "Cell of MAG 502" },
+  "Churel":         { magCell: "Cell of MAG 213", notes: "ID Type A (viridia, skyly, purplenum, redria, yellowboze) Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern", altDropName: "Cell of MAG 213" },
+  "Preta":          { magCell: "Cell of MAG 213", notes: "ID Type B (greenill, bluefull, pinkal, oran, whitill) Holiday Rappy Mag Cell Drop - Hallo Rappy - Jack of Lantern",  altDropName: "Cell of MAG 213" },
+"MARK3":          { magCombine: "Kit of Mark 3", notes:"Level 5-9 Mag Character Level 65+ Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Mark 3"  },
+"MASTER SYSTEM":          { magCombine: "Kit of Master System", notes:"MARK3 level 50 Mag, Character 70+ Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Master System"  },
+"GENESIS":          { magCombine: "Kit of Genesis", notes:"MARK 3 or MASTERSYSTEM Mag level 70, character 80+ Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Genesis"  },
+"SEGA SATURN":          { magCombine: "Kit of Sega Saturn", notes:"MARK 3 or MASTERSYSTEM or GENESIS level 90, character 90+ Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Sega Saturn"  },
+"DREAMCAST":          { magCombine: "Kit of Dreamcast", notes:"MARK 3 or MASTERSYSTEM or GENESIS or SATURN level 101, character 100+ Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Dreamcast"  },
+
+  "HAMBURGER":      { magCombine: "Kit of Hamburger", notes:"Level 50+ Kaidabha  Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Kit of Hamburger" },
+  "ANGEL'S WING":   { magCombine: "Heart of Angel", notes:"Level 100+ mag No Aondroids Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Heart of Angel" },
+  "DEVIL'S WING":   { magCombine: "Heart of Devil", notes:"Level 100+ mag No Androids Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Heart of Devil" },
+  "DAVIL'S TAIL":   { magCombine: "Heart of Devil", notes:"DEVIL WINGS any level Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Heart of Devil" },
+ "PANZER'S TAIL":  { magCombine: "Panther's Spirit", notes:"Level 50+ Naga Holiday Rappy Mag Cell Drop - Saint Rappy - Christmas Present",   altDropName: "Panther's Spirit" },
+
 };
 
 // ---------------------------------------------------------------------------
@@ -545,10 +615,28 @@ function renderRows(rows, columns) {
     filtered = filtered.filter(r => r.sectionId === sectionFilter);
   }
 
+  const DIFF_ORDER = ["Normal","Hard","Very Hard","Ultimate"];
+  const AREA_ORDER_EP1 = ["Forest 1","Forest 2","Cave 1","Cave 2","Cave 3","Mine 1","Mine 2","Ruins 1","Ruins 2","Ruins 3"];
+  const AREA_ORDER_EP2 = ["VR Temple Alpha","VR Temple Beta","VR Spaceship Alpha","VR Spaceship Beta","Central Control Area -> Seaside","Jungle North","Jungle South","Mountain","Seaside","Seabed Upper"];
+  const AREA_ORDER = currentTab === "drops_ep2" ? AREA_ORDER_EP2 : AREA_ORDER_EP1;
+
   const sorted = sortCol
     ? [...filtered].sort((a, b) => {
         const av = a[sortCol] ?? "";
         const bv = b[sortCol] ?? "";
+        if (sortCol === "dropRatio") {
+          const da = parseFloat(String(av).split("/")[1]) || Infinity;
+          const db = parseFloat(String(bv).split("/")[1]) || Infinity;
+          return (da - db) * sortDir;
+        }
+        if (sortCol === "difficulty") {
+          const da = DIFF_ORDER.indexOf(av); const db = DIFF_ORDER.indexOf(bv);
+          return ((da < 0 ? 99 : da) - (db < 0 ? 99 : db)) * sortDir;
+        }
+        if (sortCol === "area") {
+          const da = AREA_ORDER.indexOf(av); const db = AREA_ORDER.indexOf(bv);
+          return ((da < 0 ? 99 : da) - (db < 0 ? 99 : db)) * sortDir;
+        }
         const numA = parseFloat(av);
         const numB = parseFloat(bv);
         if (!isNaN(numA) && !isNaN(numB)) return (numA - numB) * sortDir;
@@ -695,6 +783,16 @@ function matchDrops(itemName) {
   return [...ep1, ...ep2];
 }
 
+function findItemByName(name) {
+  const data = window.PSO_DATA;
+  if (!data) return null;
+  for (const tab of ["weapons","armor","shields","units","mags"]) {
+    const found = (data[tab] ?? []).find(r => r.name === name);
+    if (found) return { tab, row: found };
+  }
+  return null;
+}
+
 function renderDropRows(drops) {
   if (!drops.length){
     //console.log("drops length 0");
@@ -720,6 +818,11 @@ function renderDropRows(drops) {
 }
 
 function showDetail(tab, row) {
+  if (tab === "drops" || tab === "drops_ep2") {
+    const found = findItemByName(row.itemName ?? "");
+    if (found) { showDetail(found.tab, found.row); return; }
+  }
+
   const placeholder = document.getElementById("detail-placeholder");
   const content     = document.getElementById("detail-content");
   placeholder.classList.add("hidden");

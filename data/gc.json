@@ -5549,7 +5549,7 @@
       "desc": "A double-hit weapon that shreds enemies with countless Photon blades. "
     },
     {
-      "name": "NEI'S CLAW",
+      "name": "NEI'S CLAW (Real)",
       "classes": 161,
       "minAtp": 756,
       "maxAtp": 756,
@@ -58507,7 +58507,7 @@
       "dropRate": "0.009918",
       "dropPct": "0.000506",
       "dropRatio": "1/197772",
-      "itemName": "NEI'S CLAW",
+      "itemName": "NEI'S CLAW (Real)",
       "area": ""
     },
     {

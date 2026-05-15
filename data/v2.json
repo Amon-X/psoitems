@@ -21373,7 +21373,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
@@ -21993,7 +21993,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RIKO'S GLASSES",
       "area": ""
     },
@@ -22613,7 +22613,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RIKO'S EARRING",
       "area": ""
     },
@@ -23223,7 +23223,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
@@ -23833,7 +23833,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RIKO'S GLASSES",
       "area": ""
     },
@@ -24453,7 +24453,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RIKO'S EARRING",
       "area": ""
     },
@@ -25063,7 +25063,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
@@ -25693,7 +25693,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
@@ -26303,7 +26303,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
@@ -26913,7 +26913,7 @@
       "monster": "Dark Falz",
       "dropRate": "0.109863",
       "dropPct": "0.000000",
-      "dropRatio": "1/1",
+      "dropRatio": "1/inf",
       "itemName": "RED RING",
       "area": ""
     },
